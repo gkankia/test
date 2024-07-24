@@ -47,10 +47,10 @@ window.addEventListener('scroll', function() {
     // Check if the bottom of hero section is above or at the top of the viewport
     if (heroBottom <= 0) {
         header.classList.add('scrolled');
-        logoImg.src = '/Users/giorgikankia/Documents/GitHub/location intelligence services/img/zaxis-new.svg'; // Change to the scrolled logo
+        logoImg.src = './img/zaxis-new.svg'; // Change to the scrolled logo
     } else {
         header.classList.remove('scrolled');
-        logoImg.src = '/Users/giorgikankia/Documents/GitHub/location intelligence services/img/zaxis-new.svg'; // Change back to the default logo
+        logoImg.src = './img/zaxis-new.svg'; // Change back to the default logo
     }
 });
 
