@@ -102,10 +102,10 @@ header nav ul li {
 header nav ul li a {
     color: #2022a1;
     text-decoration: none;
-    font-family: JetBrains Mono, monospace;
+    font-family: "Noto Sans Georgian", sans-serif;
     font-size: 1.25rem;
-    font-weight: 500;
-    text-shadow: 1px 1px #58E, 2px 2px #fff, 3px 3px #58E;
+    font-weight: 300;
+    text-shadow: 1px 1px #fff, 2px 2px #58E;
     transition: font-size 0.3s ease, color 0.3s ease; /* Smooth transition for size and color */
     cursor: pointer;
 }
@@ -149,7 +149,7 @@ header nav ul li a:hover {
 .hero .header-title {
     width: 100%;
     padding: 10px 0;
-    font-family: JetBrains Mono, monospace;
+    font-family: "Noto Sans Georgian", sans-serif;
     font-size: 4rem;
     font-weight: 300;
     box-sizing: border-box;
@@ -161,7 +161,7 @@ header nav ul li a:hover {
     color: #ffde59;
     -webkit-text-stroke: 1px #ffffff;
     padding: 10px 0;
-    font-family: JetBrains Mono, monospace;
+    font-family: "Noto Sans Georgian", sans-serif;
     font-size: 4rem;
     font-weight: 100;
     box-sizing: border-box;
@@ -202,7 +202,7 @@ span.hero-title-highlight-2 {
     padding: 10px 20px;
     font-size: 1.25em;
     color: #2022a1;
-    font-family: JetBrains Mono, monospace;
+    font-family: "Noto Sans Georgian", sans-serif;
     background-color: #ffde59;
     text-decoration: none;
     border: none;
@@ -262,19 +262,19 @@ section.active {
 }
 
 #about h2, #services h2, #vissualies h2, #featured-projects h2 {
-    font-family: JetBrains Mono, monospace;
+    font-family: "Noto Sans Georgian", sans-serif;
     font-size: 6rem;
     color: #ffde59;
     -webkit-text-stroke: 1px #ffffff;
-    text-shadow: 1px 1px #2022a1, 2px 2px #2022a1, 3px 3px #2022a1, 4px 4px #2022a1, 5px 5px #2022a1, 6px 6px #2022a1;
+    text-shadow: 1px 1px #2022a1, 2px 2px #2022a1, 3px 3px #2022a1, 4px 4px #2022a1, 5px 5px #2022a1;
     text-align: left;
 }
 
 #about p, #services p {
-    font-family: Josefin Sans;
+    font-family: "Noto Sans Georgian", sans-serif;
     font-size: 2.5rem;
-    font-weight: 300;
-    text-align: justify;
+    font-weight: 200;
+    text-align: left;
     color: #2022a1;
     /*text-shadow: 1px 1px #58E, 2px 2px #fff, 3px 3px #58E;*/
     padding: 10px 0;
@@ -293,7 +293,7 @@ section.active {
 }
 
 #partners h2 {
-    font-family: JetBrains Mono, monospace;
+    font-family: "Noto Sans Georgian", sans-serif;
     font-size: 6rem;
     color: #ffde59;
     -webkit-text-stroke: 1px #ffffff;
@@ -302,7 +302,7 @@ section.active {
 }
 
 #partners p {
-    font-family: Josefin Sans;
+    font-family: "Noto Sans Georgian", sans-serif;
     font-size: 2.5rem;
     font-weight: 300;
     text-align: left;
@@ -343,7 +343,7 @@ section.active {
 
 /* Navigation buttons */
 .strong {
-    font-family: Josefin Sans;
+    font-family: "Noto Sans Georgian", sans-serif;
     font-size: 2.5rem;
     font-weight: 500;
     color: #2022a1;
@@ -376,7 +376,7 @@ section.active {
 }
 
 #services ul li {
-    font-family: Josefin Sans;
+    font-family: "Noto Sans Georgian", sans-serif;
     font-size: 2.5rem;
     font-weight: 300;
     text-align: left;
@@ -407,7 +407,7 @@ section.active {
 }
 
 #urbanyx h2 {
-    font-family: JetBrains Mono, monospace;
+    font-family: "Noto Sans Georgian", sans-serif;
     font-size: 10rem;
     color: rgba(0, 0, 0, .5);
     -webkit-text-stroke: 1px #ffffff;
@@ -417,7 +417,7 @@ section.active {
 }
 
 #urbanyx h2:hover {
-    font-family: JetBrains Mono, monospace;
+    font-family: "Noto Sans Georgian", sans-serif;
     font-size: 10rem;
     color: rgba(0, 0, 0, .5);
     -webkit-text-stroke: 1px #ffffff;
@@ -429,7 +429,7 @@ section.active {
 }
 
 #urbanyx p {
-    font-family: Josefin Sans;
+    font-family: "Noto Sans Georgian", sans-serif;
     font-size: 2rem;
     font-weight: 300;
     text-align: left;
@@ -476,7 +476,7 @@ section.active {
 }
 
 #featured-projects h4, #vissualies h4 {
-    font-family: Josefin Sans;
+    font-family: "Noto Sans Georgian", sans-serif;
     font-size: 2.5rem;
     font-weight: 300;
     text-align: left;
@@ -555,7 +555,7 @@ section.active {
 .project-info h3 {
     -webkit-text-stroke: .5px #000;
     text-align: left;
-    font-family: Josefin Sans;
+    font-family: "Noto Sans Georgian", sans-serif;
     font-size: 2rem;
     font-weight: 400;
     color: #2022a1; 
@@ -564,7 +564,7 @@ section.active {
 }
 
 .project-info p {
-    font-family: Josefin Sans !important;
+    font-family: "Noto Sans Georgian", sans-serif !important;
     font-size: 1.5rem !important;
     color: #2022a1 !important;
     /*text-shadow: 1px 1px #ffffff, 2px 2px #ffde59;*/
@@ -584,10 +584,10 @@ section.active {
 }
 
 #vissualies p {
-    font-family: Josefin Slab;
-    font-size: 1.5rem;
+    font-family: "Noto Serif Georgian", serif;
+    font-size: 1.25rem;
     font-weight: 300;
-    text-align: justify;
+    text-align: left;
     color: #252525;
     /*text-shadow: 1px 1px #58E, 2px 2px #fff, 3px 3px #58E;*/
     padding: 10px 0;
@@ -631,7 +631,7 @@ section.active {
 
 .blog-post h3 {
     margin: 20px 0 10px;
-    font-family: Josefin Sans;
+    font-family: "Noto Sans Georgian", sans-serif;
     font-size: 1.5rem;
     font-weight: 400;
     color: #2022a1;
@@ -640,25 +640,11 @@ section.active {
 
 .blog-meta {
     margin: 10px 0;
-    font-family: Josefin Sans;
+    font-family: "Noto Sans Georgian", sans-serif;
     font-size: 0.875rem;
     font-weight: 400;
     color: #666;
     text-align: left; /* Align meta text to the left */
-}
-
-.blog-date {
-    position: absolute;
-    top: 0;
-    left: 0; 
-    padding: 10px;
-    z-index: 2;
-    font-family: Josefin Sans;
-    font-weight: 400;
-    color: #2022a1;
-    text-decoration: none;
-    background:rgba(255, 255, 255, 1);
-    box-shadow: 5px 5px #ffde59;
 }
 
 .blog-date-ka {
@@ -688,7 +674,7 @@ a.author-button:hover{
 
 .blog-post h4 {
     padding: 0; /* Remove padding */
-    font-family: Libre Baskerville;
+    font-family: "Noto Serif Georgian", serif;
     font-weight: 300;
     color: #333;
     text-align: left; /* Align paragraph text to the left */
@@ -722,7 +708,7 @@ a.author-button:hover{
 }
 
 #newsletter h2 {
-    font-family: Josefin Sans;
+    font-family: "Noto Sans Georgian", sans-serif;
     font-size: 2rem;
     font-weight: 800;
     margin-bottom: 20px;
@@ -731,7 +717,7 @@ a.author-button:hover{
 }
 
 p.sign-up {
-    font-family: Josefin Sans;
+    font-family: "Noto Sans Georgian", sans-serif;
     font-size: 1rem;
     font-weight: 400;
     color: #ffffff;
@@ -739,7 +725,7 @@ p.sign-up {
 }
 
 p.newsletter-consent {
-    font-family: Josefin Sans;
+    font-family: "Noto Sans Georgian", sans-serif;
     font-size: .75rem;
     color: #ffffff;
     text-align: left; /* Align heading to the left */
@@ -755,6 +741,7 @@ p.newsletter-consent {
 
 #subscription-form input[type="email"], #subscription-form button {
     height: 50px; /* Ensure the input and button have the same height */
+    font-family: "Noto Sans Georgian", sans-serif;
     font-size: 1rem;
     letter-spacing: 0.05em; /* Add letter spacing */
     border: none;
@@ -764,6 +751,7 @@ p.newsletter-consent {
 
 /* Custom placeholder color */
 #subscription-form input[type="email"]::placeholder {
+    font-family: "Noto Sans Georgian", sans-serif;
     color: #ffde59; /* Custom placeholder font color */
 }
 
@@ -783,6 +771,7 @@ p.newsletter-consent {
     background-color: #ffde59;
     border-radius: 0;
     text-decoration: none;
+    font-family: "Noto Sans Georgian", sans-serif;
     /*border: 2px solid #fff;*/
     transition: background-color 0.3s ease, transform 0.3s ease;
     text-shadow: 1px 1px #fff, 2px 2px #fff;
@@ -807,7 +796,7 @@ p.newsletter-consent {
     width: 100%;
     margin-top: 10px;
     padding: 10px;
-    font-family: Josefin Sans;
+    font-family: "Noto Sans Georgian", sans-serif;
     font-size: 1rem;
     font-weight: 400;
     color: #e20000;
@@ -816,7 +805,7 @@ p.newsletter-consent {
 
 /* Contact Section styling */
 #contact {
-    font-family: JetBrains Mono, monospace;
+    font-family: "Noto Serif Georgian", serif;
     font-size: 5rem;
     font-weight: 800;
     text-align: center;
@@ -952,6 +941,18 @@ p.newsletter-consent {
     text-align: justify;
 }
 
+.column-ka {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    font-family: "Noto Sans Georgian", sans-serif;
+    color: white;
+    /*background: #f0f0f0; /* Background color for the columns */
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: justify;
+}
+
 .column h2 {
     font-size: 1rem;
     font-weight: 500;
@@ -961,6 +962,20 @@ p.newsletter-consent {
 }
 
 .column p {
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.column-ka h2 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgb(186, 184, 184);
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.column-ka p {
     font-size: 1rem;
     font-weight: 400;
     margin: 0;
