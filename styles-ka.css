@@ -104,7 +104,7 @@ header nav ul li a {
     text-decoration: none;
     font-family: "Noto Sans Georgian", sans-serif;
     font-size: 1.25rem;
-    font-weight: 300;
+    font-weight: 500;
     text-shadow: 1px 1px #fff, 2px 2px #58E;
     transition: font-size 0.3s ease, color 0.3s ease; /* Smooth transition for size and color */
     cursor: pointer;
@@ -179,6 +179,10 @@ span.hero-title-highlight-2 {
     background-color: rgba(85, 136, 238, 0);
     text-shadow: 1px 1px #ffffff, 2px 2px #58E, 3px 3px #ffffff, 4px 4px #58E;
     padding: 5px;
+}
+
+span {
+    font-family: "Noto Sans Georgian", sans-serif;
 }
 
 /* Button styling on main page */
@@ -272,7 +276,7 @@ section.active {
 
 #about p, #services p {
     font-family: "Noto Sans Georgian", sans-serif;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 200;
     text-align: left;
     color: #2022a1;
@@ -303,7 +307,7 @@ section.active {
 
 #partners p {
     font-family: "Noto Sans Georgian", sans-serif;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 300;
     text-align: left;
     color: #2022a1;
@@ -344,7 +348,7 @@ section.active {
 /* Navigation buttons */
 .strong {
     font-family: "Noto Sans Georgian", sans-serif;
-    font-size: 2.5rem;
+    font-size: 2.25rem;
     font-weight: 500;
     color: #2022a1;
     /*text-shadow: 1px 1px #58E, 2px 2px #fff, 3px 3px #58E;*/
@@ -377,7 +381,7 @@ section.active {
 
 #services ul li {
     font-family: "Noto Sans Georgian", sans-serif;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 300;
     text-align: left;
     color: #2022a1;

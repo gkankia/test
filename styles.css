@@ -181,6 +181,10 @@ span.hero-title-highlight-2 {
     padding: 5px;
 }
 
+span {
+    font-family: "Noto Sans Georgian", sans-serif;
+}
+
 /* Button styling on main page */
 .hero-button-container {
     position: absolute;
