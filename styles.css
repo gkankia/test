@@ -182,7 +182,7 @@ span.hero-title-highlight-2 {
 }
 
 span {
-    font-family: "Noto Sans Georgian", sans-serif;
+    font-family: Josefin Sans;
 }
 
 /* Button styling on main page */
@@ -588,8 +588,8 @@ section.active {
 }
 
 #vissualies p {
-    font-family: Josefin Slab;
-    font-size: 1.5rem;
+    font-family: "Noto Serif Georgian", serif;
+    font-size: 1.25rem;
     font-weight: 300;
     text-align: justify;
     color: #252525;
