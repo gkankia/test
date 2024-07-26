@@ -597,7 +597,7 @@ section.active {
 }
 
 .column-ka p {
-    font-size: 1rem;
+    font-size: .75rem;
     font-weight: 400;
     margin: 0;
 }
@@ -619,36 +619,6 @@ section.active {
     color: #769ed3;
 }
 /* Form styling */
-/*form {
-    display: flex;
-    flex-direction: column;
-    width: 25%;
-    margin: 0 auto;
-}
-
-form label {
-    margin: 10px 0 5px;
-}
-
-form input, form textarea {
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-form button {
-    padding: 10px;
-    background: #77b300;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-form button:hover {
-    background: #66a300;
-}
 
 /* Footer styling */
 footer {
@@ -658,12 +628,6 @@ footer {
     text-align: center;
     padding: 10px 0 10px 0;
 }
-
-/*footer .footer-logo img {
-    height: 20px; 
-} /* Adjust logo height for smaller screens */
-
-/* Full width and split columns styling */
 
 #full-width .full-width-content iframe {
     width: 100%;
@@ -684,7 +648,6 @@ footer {
     flex: 1;
     min-width: calc(50% - 10px); /* Adjust based on gap */
 }
-
 
 /* Responsive Design */
 @media (max-width: 800px) {
