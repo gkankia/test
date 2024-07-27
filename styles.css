@@ -649,6 +649,24 @@ section.active {
     font-weight: 400;
     color: #666;
     text-align: left; /* Align meta text to the left */
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adjust gap as needed */
+}
+
+.blog-author {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Adjust gap as needed */
+}
+
+.author-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #2022a1;
+    font-size: 1em;
+    font-family: Josefin Sans;
 }
 
 .blog-date {
@@ -679,15 +697,21 @@ section.active {
     box-shadow: 5px 5px #ffde59;
 }
 
-.blog-author, 
-a.author-button {
-    font-weight: 400;
-    color: #2022a1;
-    text-decoration: none;
+.author-link:hover {
+    color: #769ed3;
+    transform: scale(1.05); /* Slightly increase size on hover */
+    transition: transform 0.3s ease;
 }
 
-a.author-button:hover{
-    color: #769ed3;
+.author-img {
+    width: 30px !important; /* Adjust size as needed */
+    height: 30px !important; /* Adjust size as needed */
+    border-radius: 50% !important;
+    object-fit: cover !important;
+}
+
+.author-name {
+    margin-left: 5px; /* Adjust as needed */
 }
 
 .blog-post h4 {
@@ -916,6 +940,7 @@ p.newsletter-consent {
 }
 
 .typewriter-text {
+    font-family: JetBrains Mono, monospace;
     color: #000000; /* Text color */
     text-shadow: 1px 1px #ffde59, 2px 2px #ffde59;
 }
