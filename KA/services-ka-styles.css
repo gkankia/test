@@ -27,8 +27,8 @@ body:before {
       conic-gradient(at calc(var(--size) - 2 * var(--radius)) var(--size), transparent 75%, #000 0) var(--radius) 0,
       conic-gradient(at var(--size) calc(var(--size) - 2 * var(--radius)), transparent 75%, #000 0) 0 var(--radius);
     -webkit-mask-size: calc(var(--size) + var(--gap)) calc(var(--size) + var(--gap));
-    background: url('https://zaxis-test.netlify.app/img/kazbegi_close-up_2.png') no-repeat center center/cover;
-    /*filter: grayscale();*/
+    background: url('https://zaxis-test.netlify.app/img/elbrus_close-up.png') no-repeat center center/cover;
+    filter: grayscale();
     z-index: -1;
 }
 
@@ -163,16 +163,18 @@ header nav ul li a:hover {
     font-weight: 800;
     box-sizing: border-box;
     margin: 20px;
+    padding-top: 50px;
     text-align: left;
-    color: rgba(0, 0, 0, .5);
+    color: rgba(255, 222, 89);
     position: relative;
     -webkit-text-stroke: 1.5px #ffffff;
     /*background-image: linear-gradient(160deg,  #ff66c4, #2022a1) !important;*/
     background-size: 150% !important;
     background-clip: text;
     -webkit-background-clip: text;
-    text-fill-color: rgba(0, 0, 0, .5);
-    -webkit-text-fill-color: rgba(0, 0, 0, .5);
+    text-fill-color: rgba(255, 222, 89);
+    -webkit-text-fill-color: rgba(255, 222, 89);
+    text-shadow: 1px 1px #2022a1, 2px 2px #2022a1, 3px 3px #2022a1, 4px 4px #2022a1, 5px 5px #2022a1, 6px 6px #2022a1;
 }
 
 .hero .header-subtitle {
@@ -190,22 +192,7 @@ header nav ul li a:hover {
 #services-what {
     height: 100vh;
     padding: 5% 0 5% 0;
-    background: linear-gradient(0deg, rgb(85, 136, 238, 0.15), rgb(255, 255, 255, .85));
-    /*background: url('/Users/giorgikankia/Documents/GitHub/location intelligence services/img/pointy-mountains.png') no-repeat center center/cover;*/
-}
-#services-what::before {
-    content: '';
-    position: absolute;
-    top: 15%; /* Adjust top position as needed */
-    left: 85%;
-    transform: translateX(-50%);
-    width: 500px; /* Adjust size of the circle */
-    height: 500px; /* Adjust size of the circle */
-    background-color: #ffde59; /* Circle color */
-    opacity: 0.5;
-    border-radius: 50%; /* Ensure it's a circle */
-    z-index: 1; /* Behind the project content */
-    mix-blend-mode: saturation; /* Blending mode with background image */
+    background: linear-gradient(180deg, rgb(85, 136, 238, 0.15) 50%, rgb(255, 255, 255, 1));
 }
 
 #services-what h2 {
