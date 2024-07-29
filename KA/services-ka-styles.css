@@ -1,0 +1,719 @@
+@import url('https://fonts.googleapis.com/css2?family=Baskervville+SC&family=Baskervville:ital@0;1&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Georgian:wght@100..900&family=Noto+Serif+Georgian:wght@100..900&display=swap');
+/* Basic reset and styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.language-switcher {
+    margin: 10px;
+    display: flex;
+    gap: 10px; /* Space between language buttons */
+}
+
+.language-switcher .language {
+    cursor: pointer;
+    padding: 5px 10px;
+    text-decoration: none;
+    transition: background 0.3s ease, color 0.3s ease;
+    color: #2022a1;
+    font-family: JetBrains Mono, monospace;
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-shadow: 1px 1px #58E, 2px 2px #fff, 3px 3px #58E;
+}
+
+.language-switcher .language:hover {
+    background: #2022a1;
+    color: #ffde59;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Header styling */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /*height: 150px;*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 1000;
+    overflow: hidden; /* Prevent overflow */
+    background: transparent; /* Solid background when scrolled */
+}
+
+header.scrolled {
+    background: transparent; /* Solid background when scrolled */
+}
+
+header .logo {
+    margin-left: 100px; /* Move the logo 150px from the left */
+}
+
+header .logo h2 {
+    font-family: Josefin Sans;
+    font-size: .5rem;
+    font-weight: 500;
+    color: rgb(186, 184, 184);
+    text-align: left;
+}
+
+header .logo img {
+    height: 25px; /* Adjust logo height */
+    transition: opacity 0.3s ease;
+}
+
+header nav {
+    margin-left: auto;  /* Pushes it to the rirght */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    /*flex-direction: column; /* Stack nav items vertically */
+}
+
+header nav ul li {
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: #2022a1;
+    text-decoration: none;
+    font-family: "Noto Sans Georgian", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-shadow: 1px 1px #fff, 2px 2px #58E;
+    transition: font-size 0.3s ease, color 0.3s ease; /* Smooth transition for size and color */
+    cursor: pointer;
+}
+
+header nav ul li a:hover {
+    color: #ffde59;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px #58E, 2px 2px #fff, 3px 3px #58E;
+    background: #2022a1;
+    padding: 5px 10px;
+}
+
+/* Hero section styling */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Adjust height to account for fixed header */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    opacity: 1; /* Ensure it is visible */
+    transform: none; /* Ensure it is not affected by transform */
+    transition: none; /* No transition for hero */
+}
+
+.hero .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    position: relative; /* Ensure relative positioning for children */
+}
+
+.hero .header-title {
+    width: 100%;
+    font-family: "Noto Sans Georgian", sans-serif;
+    font-size: 5rem;
+    font-weight: 800;
+    box-sizing: border-box;
+    margin: 20px;
+    text-align: left;
+    color: transparent;
+    position: relative;
+    -webkit-text-stroke: 1px #ffffff;
+    background-image: linear-gradient(160deg,  #ff66c4, #2022a1) !important;
+    background-size: 150% !important;
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: Gradient 5s ease infinite !important;
+    -moz-animation: Gradient 5s ease infinite !important;
+    animation: Gradient 5s ease infinite !important;
+}
+
+@-webkit-keyframes Gradient {
+    0% {background-position: 0% 50%}
+    50% {background-position: 100% 50%}
+    100% {background-position: 0% 50%}
+}
+@-moz-keyframes Gradient {
+    0% {background-position: 0% 50%}
+    50% {background-position: 100% 50%}
+    100% {background-position: 0% 50%}
+}
+@keyframes Gradient { 
+    0% {background-position: 0% 50%}
+    50% {background-position: 100% 50%}
+    100% {background-position: 0% 50%}
+}
+
+body:before {
+    content: "";
+    position: fixed;
+    inset: 0; /* Remove the gap */
+    --radial-gradient: radial-gradient(var(--radius) at var(--radius) var(--radius), #000 98%, transparent);
+    --offset: calc(-2 * var(--radius) - var(--gap));
+    -webkit-mask:
+      var(--radial-gradient),
+      var(--radial-gradient) var(--offset) 0,
+      var(--radial-gradient) 0 var(--offset),
+      var(--radial-gradient) var(--offset) var(--offset),
+      conic-gradient(at calc(var(--size) - 2 * var(--radius)) var(--size), transparent 75%, #000 0) var(--radius) 0,
+      conic-gradient(at var(--size) calc(var(--size) - 2 * var(--radius)), transparent 75%, #000 0) 0 var(--radius);
+    -webkit-mask-size: calc(var(--size) + var(--gap)) calc(var(--size) + var(--gap));
+    background: linear-gradient(0deg, #58E, #ffffff);
+    z-index: -10;
+}
+
+.hero .header-subtitle {
+    width: 100%;
+    color: #ffffff;
+    padding: 10px 0;
+    font-family: "Noto Sans Georgian", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+    box-sizing: border-box;
+    margin: 20px;
+}
+
+/* Team section styling */
+#team {
+    position: relative;
+    height: 105vh;
+    padding: 5% 0 5% 0;
+}
+
+#team h2 {
+    font-family: "Noto Sans Georgian", sans-serif;
+    font-size: 5rem;
+    color: #ffde59;
+    -webkit-text-stroke: 1px #ffffff;
+    text-shadow: 1px 1px #2022a1, 2px 2px #2022a1, 3px 3px #2022a1, 4px 4px #2022a1, 5px 5px #2022a1, 6px 6px #2022a1;
+    text-align: right;
+}
+
+#team h4 {
+    width: 100%;
+    color: #ffffff;
+    padding: 10px 0;
+    font-family: "Noto Sans Georgian", sans-serif;
+    font-size: 2rem;
+    line-height: 1.6em;
+    font-weight: 300;
+    box-sizing: border-box;
+    text-align: right;
+}
+
+.team-container, .motto-container {
+    width: 75%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.team-grid {
+    display: grid;
+    margin-top: 100px;
+    grid-template-columns: repeat(2, 4fr);
+    gap: 10px;
+}
+
+.team-member {
+    font-family: "Noto Sans Georgian", sans-serif;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.team-member img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 3px solid white;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.team-member h3 {
+    margin: 10px 0 5px;
+    font-weight: 400;
+    font-size: 1.25em;
+}
+
+.team-member p {
+    font-size: 1em;
+    font-weight: 300;
+}
+
+/* Section styling */
+section {
+    display: flex;
+    position: relative;
+    opacity: 0;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    transform: translateY(75px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#motto {
+    height: 100vh;
+    padding: 5% 0 5% 0;
+    /*background: url('/Users/giorgikankia/Documents/GitHub/location intelligence services/img/pointy-mountains.png') no-repeat center center/cover;*/
+}
+
+#motto h2 {
+    font-family: "Noto Sans Georgian", sans-serif;
+    font-size: 5rem;
+    color: #ffde59;
+    -webkit-text-stroke: 1px #ffffff;
+    text-shadow: 1px 1px #2022a1, 2px 2px #2022a1, 3px 3px #2022a1, 4px 4px #2022a1, 5px 5px #2022a1, 6px 6px #2022a1;
+    text-align: left;
+}
+
+#motto h4 {
+    font-family: "Noto Sans Georgian", sans-serif;
+    font-size: 2rem;
+    font-weight: 300;
+    text-align: left;
+    color: #ffffff;
+    /*text-shadow: 1px 1px #58E, 2px 2px #fff, 3px 3px #58E;*/
+    padding: 10px 0;
+}
+
+/* Partners section */ 
+#partners {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full screen height */
+    padding: 5% 0;    
+    text-align: center;
+    background-color: rgba(255, 255, 255, 1);
+    opacity: 1; /* Ensure it is visible */
+    transform: none; /* Ensure it is not affected by transform */
+    transition: none; /* No transition for partners */
+}
+
+#partners h2 {
+    font-family: "Noto Sans Georgian", sans-serif;
+    font-size: 5rem;
+    color: #ffde59;
+    -webkit-text-stroke: 1px #ffffff;
+    text-shadow: 1px 1px #2022a1, 2px 2px #2022a1, 3px 3px #2022a1, 4px 4px #2022a1, 5px 5px #2022a1, 6px 6px #2022a1;
+    text-align: left;
+}
+
+#partners h4 {
+    font-family: "Noto Sans Georgian", sans-serif;
+    font-size: 2rem;
+    font-weight: 300;
+    text-align: left;
+    color: #2022a1;
+    /*text-shadow: 1px 1px #58E, 2px 2px #fff, 3px 3px #58E;*/
+    padding: 10px;
+}
+
+.partners-content {
+    width: 75%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.partner-logos {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, auto);
+    /*gap: 20px;
+    margin-top: 20px;*/
+}
+
+.partner-logos .logo {
+    transition: transform 0.3s ease;
+}
+
+.partner-logos .logo img {
+    max-width: 100%; /* Ensures the image doesn't overflow its container */
+    max-height: 100%; /* Ensures the image doesn't overflow its container */
+    width: auto;
+    height: auto;
+    filter: grayscale(100%); /* Make the logos black and white */
+    transition: filter 0.3s ease;
+}
+
+.partner-logos .logo:hover img {
+    filter: grayscale(0%); /* Color the logos on hover */
+}
+
+/* Navigation buttons */
+.strong {
+    font-family: "Noto Sans Georgian", sans-serif;
+    font-size: 2.25rem;
+    font-weight: 500;
+    color: transparent;
+    position: relative;
+    background-image: linear-gradient(160deg,  #2022a1, #f768a1) !important;
+    background-size: 150% !important;
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: Gradient 5s ease infinite !important;
+    -moz-animation: Gradient 5s ease infinite !important;
+    animation: Gradient 5s ease infinite !important;
+}
+
+@-webkit-keyframes Gradient {
+    0% {background-position: 0% 50%}
+    50% {background-position: 100% 50%}
+    100% {background-position: 0% 50%}
+}
+@-moz-keyframes Gradient {
+    0% {background-position: 0% 50%}
+    50% {background-position: 100% 50%}
+    100% {background-position: 0% 50%}
+}
+@keyframes Gradient { 
+    0% {background-position: 0% 50%}
+    50% {background-position: 100% 50%}
+    100% {background-position: 0% 50%}
+}
+
+.section-img {
+    max-width: 100%; /* Ensures the image does not exceed its parent container */
+    height: auto; /* Maintains aspect ratio while scaling */
+    display: block; /* Ensures proper block-level display */
+    margin: 0 auto; /* Centers the image horizontally */
+}
+/* Urbanyx Project section styling */
+
+/* Projects section styling */ 
+
+/* Blog section styling */
+
+/* Newsletter subsciprtion section styling */
+
+/* Contact Section styling */
+#contact {
+    font-family: "Noto Sans Georgian", sans-serif;
+    font-size: 5rem;
+    font-weight: 800;
+    text-align: center;
+    box-sizing: border-box;
+    min-height: 75vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    --size: 75px; /* the size */
+    --gap: 2.5px;  /* the gap */ 
+    --radius: 7.5px;  /* the radius */
+
+    /* Background with radial and conic gradients */
+    background-color: white;
+}
+
+.contact-content {
+    width: 90%;
+    position: relative;
+    z-index: 1;
+    color: transparent;
+    background-image: linear-gradient(140deg, #58E 0%, #ee59ff 100%) !important;
+    background-size: 150% !important;
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: Gradient 10s ease infinite !important;
+    -moz-animation: Gradient 10s ease infinite !important;
+    animation: Gradient 10s ease infinite !important;
+}
+
+@-webkit-keyframes Gradient {
+    0% {background-position: 0% 50%}
+    50% {background-position: 100% 50%}
+    100% {background-position: 0% 50%}
+}
+@-moz-keyframes Gradient {
+    0% {background-position: 0% 50%}
+    50% {background-position: 100% 50%}
+    100% {background-position: 0% 50%}
+}
+@keyframes Gradient { 
+    0% {background-position: 0% 50%}
+    50% {background-position: 100% 50%}
+    100% {background-position: 0% 50%}
+}
+
+#contact:before {
+    content: "";
+    position: fixed;
+    inset: 0; /* Remove the gap */
+    --radial-gradient: radial-gradient(var(--radius) at var(--radius) var(--radius), #000 98%, transparent);
+    --offset: calc(-2 * var(--radius) - var(--gap));
+    -webkit-mask:
+      var(--radial-gradient),
+      var(--radial-gradient) var(--offset) 0,
+      var(--radial-gradient) 0 var(--offset),
+      var(--radial-gradient) var(--offset) var(--offset),
+      conic-gradient(at calc(var(--size) - 2 * var(--radius)) var(--size), transparent 75%, #000 0) var(--radius) 0,
+      conic-gradient(at var(--size) calc(var(--size) - 2 * var(--radius)), transparent 75%, #000 0) 0 var(--radius);
+    -webkit-mask-size: calc(var(--size) + var(--gap)) calc(var(--size) + var(--gap));
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(85, 136, 238, .5));
+    z-index: -1;
+}
+
+.typewriter-container {
+    position: relative;
+    z-index: 1;
+    margin-top: 20px;
+}
+
+.typewriter {
+    display: inline-block;
+    font-size: 2.5rem !important;
+    font-weight: 400 !important;
+    overflow: hidden; /* Ensures only the current text is visible */
+    border-right: 0.1em solid #000000; /* Blinking cursor */
+    white-space: nowrap; /* Keeps text in a single line */
+    margin: 0 auto; /* Centers the typewriter */
+    animation: typing 3.5s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #000000; }
+}
+
+.typewriter-text {
+    color: #000000; /* Text color */
+    text-shadow: 1px 1px #ffde59, 2px 2px #ffde59;
+}
+
+/* Zaxis-info section styling */
+#zaxis-info {
+    position: relative;
+    height: 35vh;
+    z-index: 1; /* Ensure content is above pseudo-element */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: black;
+    border-top: 5px solid white;
+}
+
+.zaxis-info-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Four equal columns */
+    gap: 20px; /* Adjust gap between columns as needed */
+    width: 75%; /* Fit to 75% width of the screen */
+    align-items: start;
+    box-sizing: border-box;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    font-family: Josefin Sans;
+    color: white;
+    /*background: #f0f0f0; /* Background color for the columns */
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: justify;
+}
+
+.column-ka {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    font-family: "Noto Sans Georgian", sans-serif;
+    color: white;
+    /*background: #f0f0f0; /* Background color for the columns */
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: justify;
+}
+
+.column h2 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgb(186, 184, 184);
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.column p {
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.column-ka h2 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgb(186, 184, 184);
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.column-ka p {
+    font-size: .75rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.column img {
+    max-width: 100%;
+    height: auto;    
+    margin: 0 auto;
+}
+
+.link-button {
+    color: #ffffff;
+    display: inline-block;
+    text-decoration: none;
+    /*border: 2px solid #fff;*/
+}
+
+.link-button:hover{
+    color: #769ed3;
+}
+/* Form styling */
+
+/* Footer styling */
+footer {
+    font-family: JetBrains Mono, monospace;
+    background: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0 10px 0;
+}
+
+#full-width .full-width-content iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.split-columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Optional, for spacing between columns */
+}
+
+.split-columns .column-left,
+.split-columns .column-right {
+    max-height: 100%;
+    margin: 0 auto;
+    flex: 1;
+    min-width: calc(50% - 10px); /* Adjust based on gap */
+}
+
+/* Responsive Design */
+@media (max-width: 800px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    
+/* Header styling */
+header {
+    height: 100px;
+    padding: 5px 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, );
+    z-index: 1000;
+    overflow: hidden; /* Prevent overflow */
+}
+
+    header .logo img {
+        height: 20px; /* Adjust logo height for smaller screens */
+    }
+
+    header nav ul {
+        /*flex-direction: column;*/
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 10px 10px;
+    }
+
+    header nav ul li a {
+        font-size: 1rem;
+        transition: font-size 0.3s ease, color 0.3s ease; /* Smooth transition for size and color */
+    }
+
+    .hero .header-title {
+        font-size: 2rem;
+    }
+
+    .hero .header-subtitle {
+        font-size: 1.2rem;
+    }
+
+    form {
+        width: 90%;
+    }
+
+    .split-columns {
+        flex-direction: column;
+    }
+
+    .split-columns .column-left,
+    .split-columns .column-right {
+        min-width: 100%;
+    }
+
+    #partners .partners-content {
+        height: 50vh; /* Adjust for smaller screens if needed */
+    }
+}
