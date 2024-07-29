@@ -13,6 +13,25 @@ body {
     box-sizing: border-box;
 }
 
+body:before {
+    content: "";
+    position: fixed;
+    inset: 0; /* Remove the gap */
+    --radial-gradient: radial-gradient(var(--radius) at var(--radius) var(--radius), #000 98%, transparent);
+    --offset: calc(-2 * var(--radius) - var(--gap));
+    -webkit-mask:
+      var(--radial-gradient),
+      var(--radial-gradient) var(--offset) 0,
+      var(--radial-gradient) 0 var(--offset),
+      var(--radial-gradient) var(--offset) var(--offset),
+      conic-gradient(at calc(var(--size) - 2 * var(--radius)) var(--size), transparent 75%, #000 0) var(--radius) 0,
+      conic-gradient(at var(--size) calc(var(--size) - 2 * var(--radius)), transparent 75%, #000 0) 0 var(--radius);
+    -webkit-mask-size: calc(var(--size) + var(--gap)) calc(var(--size) + var(--gap));
+    background: url('https://zaxis-test.netlify.app/img/kazbegi_close-up_2.png') no-repeat center center/cover;
+    /*filter: grayscale();*/
+    z-index: -1;
+}
+
 .language-switcher {
     margin: 10px;
     display: flex;
@@ -125,6 +144,7 @@ header nav ul li a:hover {
     opacity: 1; /* Ensure it is visible */
     transform: none; /* Ensure it is not affected by transform */
     transition: none; /* No transition for hero */
+    background: linear-gradient(0deg, rgb(85, 136, 238, 0.15) 50%, rgb(255, 255, 255, 1));
 }
 
 .hero .hero-content {
@@ -139,68 +159,91 @@ header nav ul li a:hover {
 .hero .header-title {
     width: 100%;
     font-family: "Noto Sans Georgian", sans-serif;
-    font-size: 5rem;
+    font-size: 8rem;
     font-weight: 800;
     box-sizing: border-box;
     margin: 20px;
     text-align: left;
-    color: transparent;
+    color: rgba(0, 0, 0, .5);
     position: relative;
-    -webkit-text-stroke: 1px #ffffff;
-    background-image: linear-gradient(160deg,  #ff66c4, #2022a1) !important;
+    -webkit-text-stroke: 1.5px #ffffff;
+    /*background-image: linear-gradient(160deg,  #ff66c4, #2022a1) !important;*/
     background-size: 150% !important;
     background-clip: text;
     -webkit-background-clip: text;
-    text-fill-color: transparent;
-    -webkit-text-fill-color: transparent;
-    -webkit-animation: Gradient 5s ease infinite !important;
-    -moz-animation: Gradient 5s ease infinite !important;
-    animation: Gradient 5s ease infinite !important;
-}
-
-@-webkit-keyframes Gradient {
-    0% {background-position: 0% 50%}
-    50% {background-position: 100% 50%}
-    100% {background-position: 0% 50%}
-}
-@-moz-keyframes Gradient {
-    0% {background-position: 0% 50%}
-    50% {background-position: 100% 50%}
-    100% {background-position: 0% 50%}
-}
-@keyframes Gradient { 
-    0% {background-position: 0% 50%}
-    50% {background-position: 100% 50%}
-    100% {background-position: 0% 50%}
-}
-
-body:before {
-    content: "";
-    position: fixed;
-    inset: 0; /* Remove the gap */
-    --radial-gradient: radial-gradient(var(--radius) at var(--radius) var(--radius), #000 98%, transparent);
-    --offset: calc(-2 * var(--radius) - var(--gap));
-    -webkit-mask:
-      var(--radial-gradient),
-      var(--radial-gradient) var(--offset) 0,
-      var(--radial-gradient) 0 var(--offset),
-      var(--radial-gradient) var(--offset) var(--offset),
-      conic-gradient(at calc(var(--size) - 2 * var(--radius)) var(--size), transparent 75%, #000 0) var(--radius) 0,
-      conic-gradient(at var(--size) calc(var(--size) - 2 * var(--radius)), transparent 75%, #000 0) 0 var(--radius);
-    -webkit-mask-size: calc(var(--size) + var(--gap)) calc(var(--size) + var(--gap));
-    background: linear-gradient(0deg, #58E, #ffffff);
-    z-index: -10;
+    text-fill-color: rgba(0, 0, 0, .5);
+    -webkit-text-fill-color: rgba(0, 0, 0, .5);
 }
 
 .hero .header-subtitle {
     width: 100%;
-    color: #ffffff;
-    padding: 10px 0;
+    color: rgba(255, 222, 89, 1);
+    padding: 10px;
     font-family: "Noto Sans Georgian", sans-serif;
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 500;
     box-sizing: border-box;
     margin: 20px;
+}
+
+/* #services-what styling */
+#services-what {
+    height: 100vh;
+    padding: 5% 0 5% 0;
+    background: linear-gradient(0deg, rgb(85, 136, 238, 0.15), rgb(255, 255, 255, .85));
+    /*background: url('/Users/giorgikankia/Documents/GitHub/location intelligence services/img/pointy-mountains.png') no-repeat center center/cover;*/
+}
+#services-what::before {
+    content: '';
+    position: absolute;
+    top: 15%; /* Adjust top position as needed */
+    left: 85%;
+    transform: translateX(-50%);
+    width: 500px; /* Adjust size of the circle */
+    height: 500px; /* Adjust size of the circle */
+    background-color: #ffde59; /* Circle color */
+    opacity: 0.5;
+    border-radius: 50%; /* Ensure it's a circle */
+    z-index: 1; /* Behind the project content */
+    mix-blend-mode: saturation; /* Blending mode with background image */
+}
+
+#services-what h2 {
+    font-family: "Noto Sans Georgian", sans-serif;
+    font-size: 5rem;
+    color: #ffde59;
+    -webkit-text-stroke: 1px #ffffff;
+    text-shadow: 1px 1px #2022a1, 2px 2px #2022a1, 3px 3px #2022a1, 4px 4px #2022a1, 5px 5px #2022a1, 6px 6px #2022a1;
+    text-align: left;
+}
+
+#services-what h4 {
+    font-family: "Noto Sans Georgian", sans-serif;
+    font-size: 2rem;
+    font-weight: 300;
+    text-align: left;
+    color: #ffffff;
+    /*text-shadow: 1px 1px #58E, 2px 2px #fff, 3px 3px #58E;*/
+    padding: 10px 0;
+}
+
+#services-what h2 {
+    font-family: "Noto Sans Georgian", sans-serif;
+    font-size: 5rem;
+    color: #ffde59;
+    -webkit-text-stroke: 1px #ffffff;
+    text-shadow: 1px 1px #2022a1, 2px 2px #2022a1, 3px 3px #2022a1, 4px 4px #2022a1, 5px 5px #2022a1, 6px 6px #2022a1;
+    text-align: left;
+}
+
+#services-what h4 {
+    font-family: "Noto Sans Georgian", sans-serif;
+    font-size: 2rem;
+    font-weight: 300;
+    text-align: left;
+    color: #ffffff;
+    /*text-shadow: 1px 1px #58E, 2px 2px #fff, 3px 3px #58E;*/
+    padding: 10px 0;
 }
 
 /* Team section styling */
@@ -231,7 +274,7 @@ body:before {
     text-align: right;
 }
 
-.team-container, .motto-container {
+.team-container, .services-what-container {
     width: 75%;
     margin: auto;
     overflow: hidden;
@@ -288,31 +331,6 @@ section.active {
     transform: translateY(0);
 }
 
-#motto {
-    height: 100vh;
-    padding: 5% 0 5% 0;
-    /*background: url('/Users/giorgikankia/Documents/GitHub/location intelligence services/img/pointy-mountains.png') no-repeat center center/cover;*/
-}
-
-#motto h2 {
-    font-family: "Noto Sans Georgian", sans-serif;
-    font-size: 5rem;
-    color: #ffde59;
-    -webkit-text-stroke: 1px #ffffff;
-    text-shadow: 1px 1px #2022a1, 2px 2px #2022a1, 3px 3px #2022a1, 4px 4px #2022a1, 5px 5px #2022a1, 6px 6px #2022a1;
-    text-align: left;
-}
-
-#motto h4 {
-    font-family: "Noto Sans Georgian", sans-serif;
-    font-size: 2rem;
-    font-weight: 300;
-    text-align: left;
-    color: #ffffff;
-    /*text-shadow: 1px 1px #58E, 2px 2px #fff, 3px 3px #58E;*/
-    padding: 10px 0;
-}
-
 /* Partners section */ 
 #partners {
     position: relative;
@@ -320,7 +338,7 @@ section.active {
     height: 100vh; /* Full screen height */
     padding: 5% 0;    
     text-align: center;
-    background-color: rgba(255, 255, 255, 1);
+    background-image: linear-gradient(160deg, #f768a1 10%, rgba(32, 34, 162, .15)) !important;
     opacity: 1; /* Ensure it is visible */
     transform: none; /* Ensure it is not affected by transform */
     transition: none; /* No transition for partners */
@@ -441,7 +459,7 @@ section.active {
     --radius: 7.5px;  /* the radius */
 
     /* Background with radial and conic gradients */
-    background-color: white;
+    background-color: transparent;
 }
 
 .contact-content {
@@ -449,7 +467,8 @@ section.active {
     position: relative;
     z-index: 1;
     color: transparent;
-    background-image: linear-gradient(140deg, #58E 0%, #ee59ff 100%) !important;
+    -webkit-text-stroke: 1px #ffffff;
+    background-image: linear-gradient(140deg, #58E 0%, rgb(238, 89, 255) 100%) !important;
     background-size: 150% !important;
     background-clip: text;
     -webkit-background-clip: text;
@@ -480,7 +499,7 @@ section.active {
     content: "";
     position: fixed;
     inset: 0; /* Remove the gap */
-    --radial-gradient: radial-gradient(var(--radius) at var(--radius) var(--radius), #000 98%, transparent);
+    --radial-gradient: radial-gradient(var(--radius) at var(--radius) var(--radius), #ed0a0a 98%, transparent);
     --offset: calc(-2 * var(--radius) - var(--gap));
     -webkit-mask:
       var(--radial-gradient),
@@ -490,7 +509,8 @@ section.active {
       conic-gradient(at calc(var(--size) - 2 * var(--radius)) var(--size), transparent 75%, #000 0) var(--radius) 0,
       conic-gradient(at var(--size) calc(var(--size) - 2 * var(--radius)), transparent 75%, #000 0) 0 var(--radius);
     -webkit-mask-size: calc(var(--size) + var(--gap)) calc(var(--size) + var(--gap));
-    background: linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(85, 136, 238, .5));
+    /*background: linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(85, 136, 238, .5));*/
+    background: transparent;
     z-index: -1;
 }
 
@@ -518,12 +538,12 @@ section.active {
 
 @keyframes blink-caret {
     from, to { border-color: transparent }
-    50% { border-color: #000000; }
+    50% { border-color: #ffde59; }
 }
 
 .typewriter-text {
-    color: #000000; /* Text color */
-    text-shadow: 1px 1px #ffde59, 2px 2px #ffde59;
+    color: #ffde59; /* Text color */
+    text-shadow: 1px 1px #000000, 2px 2px #000000, 3px 3px #000000;
 }
 
 /* Zaxis-info section styling */

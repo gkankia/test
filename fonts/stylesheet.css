@@ -99,7 +99,7 @@
     font-style: normal;
 }
 @font-face {
-    font-family: 'akademiuri';
+    font-family: 'akademiuri-1';
     src: url('akademiuri-1.woff2') format('woff2'),
          url('akademiuri-1.woff') format('woff');
     font-weight: normal;
