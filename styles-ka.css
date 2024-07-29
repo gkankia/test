@@ -589,10 +589,10 @@ section.active {
 
 #vissualies p {
     font-family: "Noto Serif Georgian", serif;
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 300;
     text-align: left;
-    color: #252525;
+    color: #333;
     /*text-shadow: 1px 1px #58E, 2px 2px #fff, 3px 3px #58E;*/
     padding: 10px 0;
 }
@@ -640,6 +640,16 @@ section.active {
     font-weight: 400;
     color: #2022a1;
     text-align: left; /* Align heading text to the left */
+}
+
+.blog-content h4.subtitle {
+    font-family: "Noto Serif Georgian", serif !important;
+    font-size: 1rem !important;
+    font-weight: 300 !important;
+    /*text-shadow: 1px 1px #58E, 2px 2px #fff, 3px 3px #58E;*/
+    padding: 10px 0 !important;
+    color: #333 !important;
+    text-align: left !important; /* Align paragraph text to the left */
 }
 
 .blog-meta {
@@ -712,14 +722,6 @@ section.active {
 
 .author-name {
     margin-left: 5px; /* Adjust as needed */
-}
-
-.blog-post h4 {
-    padding: 0; /* Remove padding */
-    font-family: Libre Baskerville;
-    font-weight: 300;
-    color: #333;
-    text-align: left; /* Align paragraph text to the left */
 }
 
 /* Newsletter subsciprtion section styling */

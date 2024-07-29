@@ -587,14 +587,14 @@ section.active {
     z-index: 1; /* Ensure content is above pseudo-element */
 }
 
-#vissualies p {
-    font-family: "Noto Serif Georgian", serif;
-    font-size: 1.25rem;
-    font-weight: 300;
-    text-align: justify;
-    color: #252525;
+.blog-content h4.subtitle {
+    font-family: Libre Baskerville !important;
+    font-size: 1rem !important;
+    font-weight: 100 !important;
     /*text-shadow: 1px 1px #58E, 2px 2px #fff, 3px 3px #58E;*/
-    padding: 10px 0;
+    padding: 10px 0 !important;
+    color: #333 !important;
+    text-align: left !important; /* Align paragraph text to the left */
 }
 
 .blog-grid {
@@ -712,14 +712,6 @@ section.active {
 
 .author-name {
     margin-left: 5px; /* Adjust as needed */
-}
-
-.blog-post h4 {
-    padding: 0; /* Remove padding */
-    font-family: Libre Baskerville;
-    font-weight: 300;
-    color: #333;
-    text-align: left; /* Align paragraph text to the left */
 }
 
 /* Newsletter subsciprtion section styling */
