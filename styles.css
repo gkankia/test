@@ -934,7 +934,7 @@ p.newsletter-consent {
 .typewriter-text {
     font-family: JetBrains Mono, monospace;
     color: #000000; /* Text color */
-    text-shadow: 1px 1px #ffde59, 2px 2px #ffde59;
+    text-shadow: 1px 1px #ffffff, 2px 2px #ffde59, 3px 3px #ffde59;
 }
 
 /* Zaxis-info section styling */
