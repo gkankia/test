@@ -27,8 +27,9 @@ body:before {
       conic-gradient(at calc(var(--size) - 2 * var(--radius)) var(--size), transparent 75%, #000 0) var(--radius) 0,
       conic-gradient(at var(--size) calc(var(--size) - 2 * var(--radius)), transparent 75%, #000 0) 0 var(--radius);
     -webkit-mask-size: calc(var(--size) + var(--gap)) calc(var(--size) + var(--gap));
-    background: url('https://zaxis-test.netlify.app/img/elbrus_close-up.png') no-repeat center center/cover;
-    /*filter: grayscale(75%);*/
+    /*background: linear-gradient(0deg, #58E, #ffffff);*/
+    background: url('https://zaxis-test.netlify.app/img/elbrus_close-up-purple.svg') no-repeat center center/cover;
+    /*filter: grayscale(100%);*/
     z-index: -1;
 }
 
@@ -74,11 +75,11 @@ header {
     padding: 10px 20px;
     z-index: 1000;
     overflow: hidden; /* Prevent overflow */
-    background: rgba(255, 255, 255, .5); /* Solid background */
+    background: rgba(255, 255, 255, 1); /* Solid background */
 }
 
 header.scrolled {
-    background: rgba(255, 255, 255, .5); /* Solid background when scrolled */
+    background: rgba(255, 255, 255, 1); /* Solid background when scrolled */
 }
 
 header .logo {
@@ -144,7 +145,10 @@ header nav ul li a:hover {
     opacity: 1; /* Ensure it is visible */
     transform: none; /* Ensure it is not affected by transform */
     transition: none; /* No transition for hero */
-    background: linear-gradient(0deg, rgb(85, 136, 238, 0.15), rgba(85, 136, 238));
+    /*background: #8ecae6;  /* fallback for old browsers */
+    /*background: -webkit-linear-gradient(to bottom, #8ecae6, rgb(142, 202, 230, .5));  /* Chrome 10-25, Safari 5.1-6 */
+    /*background: linear-gradient(to bottom, #8ecae6, rgb(142, 202, 230, .5)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
 }
 
 .hero .hero-content {
@@ -192,7 +196,9 @@ header nav ul li a:hover {
 #services-what {
     height: 100vh;
     padding: 5% 0 5% 0;
-    background: linear-gradient(180deg, rgba(85, 136, 238, 0.15), rgba(85, 136, 238, 0.15));
+    background: #ffb703;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, rgb(255, 183, 3, .5), rgb(255, 183, 3, .5));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, rgb(255, 183, 3, .5), rgb(255, 183, 3, .5)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 #services-what h2 {
@@ -229,7 +235,9 @@ header nav ul li a:hover {
     position: relative;
     height: 105vh;
     padding: 5% 0 5% 0;
-    background: linear-gradient(180deg, rgb(85, 136, 238, 0.15), rgba(247, 105, 162, .15));
+    background: #2B6767;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, rgba(66, 128, 111, .5), rgba(90, 153, 120, .5));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, rgba(66, 128, 111, .5), rgba(90, 153, 120, .5)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 #services-how h2 {
@@ -356,7 +364,9 @@ section.active {
     position: relative;
     height: 105vh;
     padding: 15% 0 2% 0;
-    background-image: linear-gradient(180deg,  rgba(32, 34, 161, .5), #f768a1) !important;
+    background: #2B6767;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, rgb(2, 48, 71, .5), rgb(2, 48, 71, .5));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, rgb(2, 48, 71, .5), rgb(2, 48, 71, .5)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 #urbanyx::before {
@@ -428,13 +438,13 @@ section.active {
 
 #urbanyx p {
     font-family: "Noto Sans Georgian", sans-serif;
-    font-size: 5rem;
+    font-size: 2rem;
     font-weight: 300;
-    text-align: right;
-    width: 100%;
-    color: #ffde59;
+    text-align: left;
+    padding: 40px; 
+    color: #0056b3;
     background: #ffffff;
-    box-shadow: 5px 5px 0 #0056b3; /* Add box shadow on hover */
+    box-shadow: 5px 5px 0 #ffde59; /* Add box shadow on hover */
     /*text-shadow: 1px 1px #58E, 2px 2px #fff, 3px 3px #58E;*/
 }
 
@@ -486,9 +496,9 @@ section.active {
     --size: 75px; /* the size */
     --gap: 2.5px;  /* the gap */ 
     --radius: 7.5px;  /* the radius */
-    /* Background with radial and conic gradients */
-    background: #ffffff;
-    filter: grayscale(15%);
+    background: #2B6767;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, rgba(90, 153, 120, .5), rgba(113, 178, 128));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, rgba(90, 153, 120, .5),  rgba(113, 178, 128)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .contact-content {
