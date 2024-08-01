@@ -28,8 +28,8 @@ body:before {
       conic-gradient(at var(--size) calc(var(--size) - 2 * var(--radius)), transparent 75%, #000 0) 0 var(--radius);
     -webkit-mask-size: calc(var(--size) + var(--gap)) calc(var(--size) + var(--gap));
     /*background: linear-gradient(0deg, #58E, #ffffff);*/
-    background: url('https://zaxis-test.netlify.app/img/elbrus_close-up-purple.svg') no-repeat center center/cover;
-    /*filter: grayscale(100%);*/
+    background: url('https://zaxis-test.netlify.app/img/elbrus_close-up-black-red.svg') no-repeat center center/cover;
+    filter: grayscale(75%);
     z-index: -1;
 }
 
@@ -145,10 +145,16 @@ header nav ul li a:hover {
     opacity: 1; /* Ensure it is visible */
     transform: none; /* Ensure it is not affected by transform */
     transition: none; /* No transition for hero */
+    background: url('https://zaxis-test.netlify.app/img/elbrus_close-up-purple.svg') no-repeat center center/cover;
     /*background: #8ecae6;  /* fallback for old browsers */
     /*background: -webkit-linear-gradient(to bottom, #8ecae6, rgb(142, 202, 230, .5));  /* Chrome 10-25, Safari 5.1-6 */
     /*background: linear-gradient(to bottom, #8ecae6, rgb(142, 202, 230, .5)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     
+}
+
+.hero:before {
+    background: inherit;
+    filter: grayscale(75%);
 }
 
 .hero .hero-content {
@@ -196,9 +202,9 @@ header nav ul li a:hover {
 #services-what {
     height: 100vh;
     padding: 5% 0 5% 0;
-    background: #ffb703;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, rgb(255, 183, 3, .5), rgb(255, 183, 3, .5));  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, rgb(255, 183, 3, .5), rgb(255, 183, 3, .5)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /*background: #ffb703;  /* fallback for old browsers */
+    /*background: -webkit-linear-gradient(to bottom, rgb(255, 183, 3, .5), rgb(255, 183, 3, .5));  /* Chrome 10-25, Safari 5.1-6 */
+    /*background: linear-gradient(to bottom, rgb(255, 183, 3, .5), rgb(255, 183, 3, .5)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 #services-what h2 {
@@ -364,9 +370,9 @@ section.active {
     position: relative;
     height: 105vh;
     padding: 15% 0 2% 0;
-    background: #2B6767;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, rgb(2, 48, 71, .5), rgb(2, 48, 71, .5));  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, rgb(2, 48, 71, .5), rgb(2, 48, 71, .5)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /*background: #2B6767;  /* fallback for old browsers */
+    /*background: -webkit-linear-gradient(to bottom, rgb(2, 48, 71, .5), rgb(2, 48, 71, .5));  /* Chrome 10-25, Safari 5.1-6 */
+    /*background: linear-gradient(to bottom, rgb(2, 48, 71, .5), rgb(2, 48, 71, .5)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 #urbanyx::before {
@@ -496,9 +502,9 @@ section.active {
     --size: 75px; /* the size */
     --gap: 2.5px;  /* the gap */ 
     --radius: 7.5px;  /* the radius */
-    background: #2B6767;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, rgba(90, 153, 120, .5), rgba(113, 178, 128));  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, rgba(90, 153, 120, .5),  rgba(113, 178, 128)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /*background: #2B6767;  /* fallback for old browsers */
+    /*background: -webkit-linear-gradient(to bottom, rgba(90, 153, 120, .5), rgba(113, 178, 128));  /* Chrome 10-25, Safari 5.1-6 */
+    /*background: linear-gradient(to bottom, rgba(90, 153, 120, .5),  rgba(113, 178, 128)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .contact-content {
