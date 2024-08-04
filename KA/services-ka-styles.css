@@ -199,24 +199,21 @@ header nav ul li a:hover {
 }
 
 /* #services-what styling */
-
 #services-what {
     position: relative;
     height: 100vh;
     width: 100%;
-    padding: 5% 0 5% 0;
+    padding: 5% 0;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
     box-sizing: border-box;
     background: url('https://zaxis-test.netlify.app/img/elbrus-2.svg') no-repeat center center/cover;
-    /*background: #ffb703;  /* fallback for old browsers */
-    /*background: -webkit-linear-gradient(to bottom, rgb(255, 183, 3, .5), rgb(255, 183, 3, .5));  /* Chrome 10-25, Safari 5.1-6 */
-    /*background: linear-gradient(to bottom, rgb(255, 183, 3, .5), rgb(255, 183, 3, .5)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .services-what-title {
-    width: 75%;
+    width: 90%;
     text-align: left;
 }
 
@@ -226,91 +223,36 @@ header nav ul li a:hover {
     font-weight: 500;
     text-align: left;
     color: #ffffff;
-    /*text-shadow: 1px 1px #58E, 2px 2px #fff, 3px 3px #58E;*/
     padding: 10px 0;
 }
 
 .services-what-container {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr); /* Five equal columns */
-    gap: 20px; /* Adjust gap between columns as needed */
-    width: 75%; /* Fit to 75% width of the screen */
-    align-items: start;
-    box-sizing: border-box;
-}
-
-.column {
     display: flex;
-    flex-direction: column;
-    align-items: start;
-    font-family: Josefin Sans;
-    color: white;
-    /*background: #f0f0f0; /* Background color for the columns */
-    padding: 20px;
-    box-sizing: border-box;
-    text-align: justify;
+    width: 100%; /* Ensure the container takes up 90% of the parent width */
+    justify-content: space-between; /* Adjust space between columns */
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 0; /* Adjust padding if necessary */
 }
 
 .column-ka {
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: center; /* Center items inside the column */
+    justify-content: center;
     font-family: "Noto Sans Georgian", sans-serif;
     color: white;
-    /*background: #f0f0f0; /* Background color for the columns */
     padding: 20px;
     box-sizing: border-box;
-    text-align: justify;
-}
-
-.column h2 {
-    font-size: 1rem;
-    font-weight: 500;
-    color: rgb(186, 184, 184);
-    text-align: left;
-    margin-bottom: 10px;
-}
-
-.column p {
-    font-size: 1rem;
-    font-weight: 400;
-    margin: 0;
-}
-
-.column-ka h2 {
-    font-size: 1rem;
-    font-weight: 500;
-    color: rgb(186, 184, 184);
-    text-align: left;
-    margin-bottom: 10px;
-}
-
-.column-ka p {
-    font-size: .75rem;
-    font-weight: 400;
-    margin: 0;
-}
-
-.column img {
-    max-width: 100%;
-    height: auto;    
-    margin: 0 auto;
-}
-
-.link-button {
-    color: #ffffff;
-    display: inline-block;
-    text-decoration: none;
-    /*border: 2px solid #fff;*/
-}
-
-.link-button:hover{
-    color: #769ed3;
+    text-align: center; /* Center the text inside columns */
+    flex: 1 1 20%; /* Adjust flex-basis to ensure columns fit within 90% width */
+    max-width: 25%; /* Prevent columns from being too wide */
+    margin: 10px; /* Space between columns */
 }
 
 #services-what h2 {
     font-family: "Noto Sans Georgian", sans-serif;
-    font-size: 7rem;
+    font-size: 6rem;
     color: #ffde59;
     -webkit-text-stroke: 1px #ffffff;
     text-shadow: 1px 1px #2022a1, 2px 2px #2022a1, 3px 3px #2022a1, 4px 4px #2022a1, 5px 5px #2022a1, 6px 6px #2022a1;
@@ -319,22 +261,28 @@ header nav ul li a:hover {
 
 #services-what h4 {
     font-family: "Noto Sans Georgian", sans-serif;
-    font-size: 2rem;
-    font-weight: 300;
-    text-align: left;
+    font-size: 1.15rem;
+    font-weight: 400;
+    text-align: center;
     color: #ffffff;
     /*text-shadow: 1px 1px #58E, 2px 2px #fff, 3px 3px #58E;*/
     padding: 10px 0;
 }
 
-#services-what h4 {
-    font-family: "Noto Sans Georgian", sans-serif;
-    font-size: 2rem;
-    font-weight: 300;
-    text-align: left;
-    color: #ffffff;
-    /*text-shadow: 1px 1px #58E, 2px 2px #fff, 3px 3px #58E;*/
-    padding: 10px 0;
+/* Ensure SVG is centered */
+.column-ka svg {
+    display: block;
+    margin: 0 auto; /* Center the SVG horizontally */
+    margin-bottom: 10px; /* Space between the SVG and the heading */
+}
+
+/* Additional overrides to ensure centering */
+.column-ka {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
 }
 
 /* Team section styling */
