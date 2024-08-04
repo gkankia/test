@@ -217,6 +217,15 @@ header nav ul li a:hover {
     text-align: left;
 }
 
+#services-what h2 {
+    font-family: "Noto Sans Georgian", sans-serif;
+    font-size: 6rem;
+    color: #ffde59;
+    -webkit-text-stroke: 1px #ffffff;
+    text-shadow: 1px 1px #2022a1, 2px 2px #2022a1, 3px 3px #2022a1, 4px 4px #2022a1, 5px 5px #2022a1, 6px 6px #2022a1;
+    text-align: left;
+}
+
 .services-what-title h3 {
     font-family: "Noto Sans Georgian", sans-serif;
     font-size: 2.5rem;
@@ -227,12 +236,22 @@ header nav ul li a:hover {
 }
 
 .services-what-container {
-    display: flex;
-    width: 100%; /* Ensure the container takes up 90% of the parent width */
-    justify-content: space-between; /* Adjust space between columns */
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 20px 0; /* Adjust padding if necessary */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal-width columns */
+    grid-gap: 20px; /* Adjust the space between columns and rows */
+    width: 90%; /* The container takes up 90% of the screen width */
+    padding: 20px 0;
+    justify-items: center; /* Center items horizontally within each grid cell */
+}
+
+#services-what h4 {
+    font-family: "Noto Sans Georgian", sans-serif;
+    font-size: 1.35rem;
+    font-weight: 400;
+    text-align: center;
+    color: #ffffff;
+    /*text-shadow: 1px 1px #58E, 2px 2px #fff, 3px 3px #58E;*/
+    padding: 10px 0;
 }
 
 .column-ka {
@@ -242,31 +261,13 @@ header nav ul li a:hover {
     justify-content: center;
     font-family: "Noto Sans Georgian", sans-serif;
     color: white;
+    text-align: center; /* Center text inside columns */
     padding: 20px;
     box-sizing: border-box;
-    text-align: center; /* Center the text inside columns */
-    flex: 1 1 20%; /* Adjust flex-basis to ensure columns fit within 90% width */
-    max-width: 25%; /* Prevent columns from being too wide */
-    margin: 10px; /* Space between columns */
 }
 
-#services-what h2 {
-    font-family: "Noto Sans Georgian", sans-serif;
-    font-size: 6rem;
-    color: #ffde59;
-    -webkit-text-stroke: 1px #ffffff;
-    text-shadow: 1px 1px #2022a1, 2px 2px #2022a1, 3px 3px #2022a1, 4px 4px #2022a1, 5px 5px #2022a1, 6px 6px #2022a1;
-    text-align: left;
-}
-
-#services-what h4 {
-    font-family: "Noto Sans Georgian", sans-serif;
-    font-size: 1.15rem;
-    font-weight: 400;
-    text-align: center;
-    color: #ffffff;
-    /*text-shadow: 1px 1px #58E, 2px 2px #fff, 3px 3px #58E;*/
-    padding: 10px 0;
+.column-ka p {
+    font-size: 1.25rem;
 }
 
 /* Ensure SVG is centered */
@@ -274,15 +275,6 @@ header nav ul li a:hover {
     display: block;
     margin: 0 auto; /* Center the SVG horizontally */
     margin-bottom: 10px; /* Space between the SVG and the heading */
-}
-
-/* Additional overrides to ensure centering */
-.column-ka {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    text-align: center !important;
 }
 
 /* Team section styling */
