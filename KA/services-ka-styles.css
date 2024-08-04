@@ -145,7 +145,7 @@ header nav ul li a:hover {
     opacity: 1; /* Ensure it is visible */
     transform: none; /* Ensure it is not affected by transform */
     transition: none; /* No transition for hero */
-    background: url('https://zaxis-test.netlify.app/img/elbrus/1.svg') no-repeat center center/cover;
+    background: url('https://zaxis-test.netlify.app/img/elbrus-1.svg') no-repeat center center/cover;
     /*background: #8ecae6;  /* fallback for old browsers */
     /*background: -webkit-linear-gradient(to bottom, #8ecae6, rgb(142, 202, 230, .5));  /* Chrome 10-25, Safari 5.1-6 */
     /*background: linear-gradient(to bottom, #8ecae6, rgb(142, 202, 230, .5)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -199,13 +199,113 @@ header nav ul li a:hover {
 }
 
 /* #services-what styling */
+
 #services-what {
+    position: relative;
     height: 100vh;
+    width: 100%;
     padding: 5% 0 5% 0;
-    background: url('https://zaxis-test.netlify.app/img/elbrus/2.svg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    background: url('https://zaxis-test.netlify.app/img/elbrus-2.svg') no-repeat center center/cover;
     /*background: #ffb703;  /* fallback for old browsers */
     /*background: -webkit-linear-gradient(to bottom, rgb(255, 183, 3, .5), rgb(255, 183, 3, .5));  /* Chrome 10-25, Safari 5.1-6 */
     /*background: linear-gradient(to bottom, rgb(255, 183, 3, .5), rgb(255, 183, 3, .5)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.services-what-title {
+    width: 75%;
+    text-align: left;
+}
+
+.services-what-title h3 {
+    font-family: "Noto Sans Georgian", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-align: left;
+    color: #ffffff;
+    /*text-shadow: 1px 1px #58E, 2px 2px #fff, 3px 3px #58E;*/
+    padding: 10px 0;
+}
+
+.services-what-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Five equal columns */
+    gap: 20px; /* Adjust gap between columns as needed */
+    width: 75%; /* Fit to 75% width of the screen */
+    align-items: start;
+    box-sizing: border-box;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    font-family: Josefin Sans;
+    color: white;
+    /*background: #f0f0f0; /* Background color for the columns */
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: justify;
+}
+
+.column-ka {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    font-family: "Noto Sans Georgian", sans-serif;
+    color: white;
+    /*background: #f0f0f0; /* Background color for the columns */
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: justify;
+}
+
+.column h2 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgb(186, 184, 184);
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.column p {
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.column-ka h2 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgb(186, 184, 184);
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.column-ka p {
+    font-size: .75rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.column img {
+    max-width: 100%;
+    height: auto;    
+    margin: 0 auto;
+}
+
+.link-button {
+    color: #ffffff;
+    display: inline-block;
+    text-decoration: none;
+    /*border: 2px solid #fff;*/
+}
+
+.link-button:hover{
+    color: #769ed3;
 }
 
 #services-what h2 {
@@ -240,9 +340,9 @@ header nav ul li a:hover {
 /* Team section styling */
 #services-how {
     position: relative;
-    height: 105vh;
+    height: 100vh;
     padding: 5% 0 5% 0;
-    background: url('https://zaxis-test.netlify.app/img/elbrus/3.svg') no-repeat center center/cover;
+    background: url('https://zaxis-test.netlify.app/img/elbrus-3.svg') no-repeat center center/cover;
 
     /*background: #2B6767;  /* fallback for old browsers */
     /*background: -webkit-linear-gradient(to bottom, rgba(66, 128, 111, .5), rgba(90, 153, 120, .5));  /* Chrome 10-25, Safari 5.1-6 */
@@ -371,9 +471,9 @@ section.active {
 /* Urbanyx Project section styling */
 #urbanyx {
     position: relative;
-    height: 105vh;
+    height: 100vh;
     padding: 15% 0 2% 0;
-    background: url('https://zaxis-test.netlify.app/img/elbrus/4.svg') no-repeat center center/cover;
+    background: url('https://zaxis-test.netlify.app/img/elbrus-4.svg') no-repeat center center/cover;
 
     /*background: #2B6767;  /* fallback for old browsers */
     /*background: -webkit-linear-gradient(to bottom, rgb(2, 48, 71, .5), rgb(2, 48, 71, .5));  /* Chrome 10-25, Safari 5.1-6 */
@@ -499,7 +599,7 @@ section.active {
     font-weight: 800;
     text-align: center;
     box-sizing: border-box;
-    min-height: 75vh;
+    min-height: 100vh;
     position: relative;
     display: flex;
     align-items: center;
@@ -507,11 +607,9 @@ section.active {
     --size: 75px; /* the size */
     --gap: 2.5px;  /* the gap */ 
     --radius: 7.5px;  /* the radius */
-    background: url('https://zaxis-test.netlify.app/img/elbrus/5.svg') no-repeat center center/cover;
-
-    /*background: #2B6767;  /* fallback for old browsers */
-    /*background: -webkit-linear-gradient(to bottom, rgba(90, 153, 120, .5), rgba(113, 178, 128));  /* Chrome 10-25, Safari 5.1-6 */
-    /*background: linear-gradient(to bottom, rgba(90, 153, 120, .5),  rgba(113, 178, 128)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #2B6767;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, rgba(90, 153, 120, .5), rgba(113, 178, 128));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, rgba(90, 153, 120, .5),  rgba(113, 178, 128)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .contact-content {
@@ -519,7 +617,7 @@ section.active {
     position: relative;
     z-index: 1;
     color: transparent;
-    /*-webkit-text-stroke: 1px #ffffff;*/
+    -webkit-text-stroke: 1px #ffffff;
     background-image: linear-gradient(140deg, #58E 0%, rgb(238, 89, 255) 100%) !important;
     background-size: 150% !important;
     background-clip: text;
@@ -616,7 +714,7 @@ section.active {
 
 .zaxis-info-container {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* Four equal columns */
+    grid-template-columns: repeat(5, 1fr); /* Five equal columns */
     gap: 20px; /* Adjust gap between columns as needed */
     width: 75%; /* Fit to 75% width of the screen */
     align-items: start;
