@@ -201,6 +201,18 @@ span {
     margin-top: 30px;
 }
 
+.about-button-container {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+}
+
+.service-button-container {
+    position: absolute;
+    bottom: 5%;
+    margin: 0 auto;
+}
+
 .hero-button, .about-button, .service-button, .blog-button, .projects-button, .urbanyx-button  {
     display: inline-block;
     padding: 10px 20px;
@@ -220,12 +232,6 @@ span {
     text-shadow: 1px 1px #fff, 2px 2px #fff, 3px 3px #fff;
     transform: scale(1.02); /* Slightly increase size on hover */
     transition: transform 0.3s ease;
-}
-
-.about-button-container, .service-button-container {
-    position: absolute;
-    top: 50%;
-    left: 20%;
 }
 
 /* Section styling */

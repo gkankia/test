@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (targetElement) {
                 window.scrollTo({
-                    top: targetElement.offsetTop - document.querySelector('header').offsetHeight,
+                    top: targetElement.offsetTop,
                     behavior: 'smooth'
                 });
             }

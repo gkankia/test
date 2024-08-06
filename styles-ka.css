@@ -201,6 +201,19 @@ span {
     margin-top: 30px;
 }
 
+.about-button-container {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+}
+
+.service-button-container {
+    position: absolute;
+    bottom: 2.5%;
+    margin: 0 auto;
+    z-index: 1;
+}
+
 .hero-button, .about-button, .service-button, .blog-button, .projects-button, .urbanyx-button  {
     display: inline-block;
     padding: 10px 20px;
@@ -220,12 +233,7 @@ span {
     text-shadow: 1px 1px #fff, 2px 2px #fff, 3px 3px #fff;
     transform: scale(1.02); /* Slightly increase size on hover */
     transition: transform 0.3s ease;
-}
-
-.about-button-container, .service-button-container {
-    position: absolute;
-    top: 50%;
-    left: 20%;
+    z-index: 1;
 }
 
 /* Section styling */
@@ -265,7 +273,7 @@ section.active {
     mix-blend-mode:hue  /*Blending mode with background image */
 }
 
-#about h2, #services h2, #vissualies h2, #featured-projects h2 {
+#about h2, #vissualies h2, #featured-projects h2 {
     font-family: "Noto Sans Georgian", sans-serif;
     font-size: 6rem;
     color: #ffde59;
@@ -354,9 +362,15 @@ section.active {
     /*text-shadow: 1px 1px #58E, 2px 2px #fff, 3px 3px #58E;*/
 }
 
+/* Services section styling */
 #services {
     height: 100vh;
     padding: 5% 0 5% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
     background: url('./img/background-georgia.png') no-repeat center center/cover;
 }
 
@@ -375,18 +389,75 @@ section.active {
     mix-blend-mode: saturation; /* Blending mode with background image */
 }
 
-#services ul {
+.services-title {
+    width: 90%;
+    text-align: left;
+}
+
+#services h2 {
+    font-family: "Noto Sans Georgian", sans-serif;
+    font-size: 6rem;
+    color: rgb(255, 222, 89);
+    -webkit-text-stroke: 1px #ffffff;
+    text-shadow: 1px 1px #2022a1, 2px 2px #2022a1, 3px 3px #2022a1, 4px 4px #2022a1, 5px 5px #2022a1, 6px 6px #2022a1;
+    text-align: left;
+}
+
+.services-title h3 {
+    font-family: "Noto Sans Georgian", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-align: left;
+    color: #ffffff;
     padding: 10px 0;
 }
 
-#services ul li {
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal-width columns */
+    grid-gap: 20px; /* Adjust the space between columns and rows */
+    width: 90%; /* The container takes up 90% of the screen width */
+    padding: 20px 0;
+    justify-items: center; /* Center items horizontally within each grid cell */
+}
+
+#services h4 {
     font-family: "Noto Sans Georgian", sans-serif;
-    font-size: 2rem;
-    font-weight: 300;
-    text-align: left;
-    color: #2022a1;
-    list-style-type: none; /* Ensure bullet points are removed */
-    /*text-shadow: 1px 1px #58E, 2px 2px #fff, 3px 3px #58E;*/
+    font-size: 1.35rem;
+    font-weight: 500;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-shadow:
+    2px 2px 2px rgba(0, 86, 179, .5),
+    -1px 1px 1px rgba(0, 86, 179, .5),
+    -1px -1px 0 rgba(0, 86, 179, .5),
+    2px -2px 0 rgba(0, 86, 179, .5);
+    /*-webkit-text-stroke: .5px #ffffff;
+    /*text-shadow: 1px 1px #ffffff, 2px 2px #ffde59;    /*text-shadow: 1px 1px #58E, 2px 2px #fff, 3px 3px #58E;*/
+    padding: 10px 0;
+}
+
+.column-ka {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items inside the column */
+    justify-content: center;
+    font-family: "Noto Sans Georgian", sans-serif;
+    color: white;
+    text-align: center; /* Center text inside columns */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.column-ka p {
+    font-size: 1.25rem;
+}
+
+/* Ensure SVG is centered */
+.column-ka svg {
+    display: block;
+    margin: 0 auto; /* Center the SVG horizontally */
+    margin-bottom: 10px; /* Space between the SVG and the heading */
 }
 
 .section-img {
