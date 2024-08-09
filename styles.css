@@ -209,8 +209,9 @@ span {
 
 .service-button-container {
     position: absolute;
-    bottom: 5%;
+    bottom: 7.5%;
     margin: 0 auto;
+    z-index: 1;
 }
 
 .hero-button, .about-button, .service-button, .blog-button, .projects-button, .urbanyx-button  {
@@ -252,7 +253,7 @@ section.active {
 
 #about {
     height: 100vh;
-    padding: 5% 0 5% 0;
+    padding: 0;
     /*background: url('/Users/giorgikankia/Documents/GitHub/location intelligence services/img/pointy-mountains.png') no-repeat center center/cover;*/
 }
 
@@ -360,39 +361,108 @@ section.active {
     /*text-shadow: 1px 1px #58E, 2px 2px #fff, 3px 3px #58E;*/
 }
 
+/* Services section styling */
 #services {
     height: 100vh;
-    padding: 5% 0 5% 0;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
     background: url('./img/background-georgia.png') no-repeat center center/cover;
+    z-index: 1000;
 }
 
 #services:before {
     content: '';
     position: absolute;
-    top: 15%; /* Adjust top position as needed */
+    top: 5%; /* Adjust top position as needed */
     left: 85%;
     transform: translateX(-50%);
-    width: 500px; /* Adjust size of the circle */
-    height: 500px; /* Adjust size of the circle */
+    width: 350px; /* Adjust size of the circle */
+    height: 350px; /* Adjust size of the circle */
     background-color: #ffde59; /* Circle color */
     opacity: 0.5;
     border-radius: 50%; /* Ensure it's a circle */
-    z-index: 1; /* Behind the project content */
+    z-index: 1000; /* Behind the project content */
     mix-blend-mode: saturation; /* Blending mode with background image */
 }
 
-#services ul {
+.service-container {
+    position: absolute;
+    top: 10%;
+    width: 75%;
+    margin: auto;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.services-title {
+    width: 90%;
+    text-align: left;
+}
+
+
+.services-title h3 {
+    font-family: Josefin Sans;
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-align: left;
+    color: #ffffff;
     padding: 10px 0;
 }
 
-#services ul li {
+.services-container {
+    position:absolute;
+    top: 45%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Creates 3 equal-width columns */
+    grid-gap: 10px; /* Adjust the space between columns and rows */
+    width: 100%; /* The container takes up 90% of the screen width */
+    height: 55%;
+    padding: 20px 0;
+    justify-items: center; /* Center items horizontally within each grid cell */
+    background-color: rgba(0, 86, 179, .25);
+}
+
+#services h4 {
     font-family: Josefin Sans;
-    font-size: 2.5rem;
-    font-weight: 300;
-    text-align: left;
-    color: #2022a1;
-    list-style-type: none; /* Ensure bullet points are removed */
-    /*text-shadow: 1px 1px #58E, 2px 2px #fff, 3px 3px #58E;*/
+    font-size: 2.75rem;
+    font-weight: 500;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-shadow:
+    2px 2px 2px rgba(0, 86, 179, .5),
+    -1px 1px 1px rgba(0, 86, 179, .5),
+    -1px -1px 0 rgba(0, 86, 179, .5),
+    2px -2px 0 rgba(0, 86, 179, .5);
+    /*-webkit-text-stroke: .5px #ffffff;
+    /*text-shadow: 1px 1px #ffffff, 2px 2px #ffde59;    /*text-shadow: 1px 1px #58E, 2px 2px #fff, 3px 3px #58E;*/
+    padding: 10px 0;
+}
+
+.column-ka {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items inside the column */
+    justify-content: center;
+    font-family: "Noto Sans Georgian", sans-serif;
+    color: white;
+    text-align: center; /* Center text inside columns */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.column-ka p {
+    font-size: 1.25rem;
+}
+
+/* Ensure SVG is centered */
+.column-ka svg {
+    display: block;
+    margin: 0 auto; /* Center the SVG horizontally */
+    margin-bottom: 10px; /* Space between the SVG and the heading */
 }
 
 .section-img {

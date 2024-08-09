@@ -42,7 +42,7 @@ body {
     overflow: hidden;
 }
 
-.about-container, .service-container {
+.about-container {
     width: 75%;
     margin: auto;
     overflow: hidden;
@@ -209,7 +209,7 @@ span {
 
 .service-button-container {
     position: absolute;
-    bottom: 2.5%;
+    bottom: 7.5%;
     margin: 0 auto;
     z-index: 1;
 }
@@ -254,7 +254,7 @@ section.active {
 
 #about {
     height: 100vh;
-    padding: 5% 0 5% 0;
+    padding: 0;
     /*background: url('/Users/giorgikankia/Documents/GitHub/location intelligence services/img/pointy-mountains.png') no-repeat center center/cover;*/
 }
 
@@ -365,28 +365,38 @@ section.active {
 /* Services section styling */
 #services {
     height: 100vh;
-    padding: 5% 0 5% 0;
+    padding: 5%;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     box-sizing: border-box;
     background: url('./img/background-georgia.png') no-repeat center center/cover;
+    z-index: 1000;
 }
 
 #services:before {
     content: '';
     position: absolute;
-    top: 15%; /* Adjust top position as needed */
+    top: 5%; /* Adjust top position as needed */
     left: 85%;
     transform: translateX(-50%);
-    width: 500px; /* Adjust size of the circle */
-    height: 500px; /* Adjust size of the circle */
+    width: 350px; /* Adjust size of the circle */
+    height: 350px; /* Adjust size of the circle */
     background-color: #ffde59; /* Circle color */
     opacity: 0.5;
     border-radius: 50%; /* Ensure it's a circle */
-    z-index: 1; /* Behind the project content */
+    z-index: 1000; /* Behind the project content */
     mix-blend-mode: saturation; /* Blending mode with background image */
+}
+
+.service-container {
+    position: absolute;
+    top: 10%;
+    width: 75%;
+    margin: auto;
+    overflow: hidden;
+    z-index: 1000;
 }
 
 .services-title {
@@ -413,17 +423,21 @@ section.active {
 }
 
 .services-container {
+    position:absolute;
+    top: 45%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal-width columns */
-    grid-gap: 20px; /* Adjust the space between columns and rows */
-    width: 90%; /* The container takes up 90% of the screen width */
+    grid-template-columns: repeat(5, 1fr); /* Creates 3 equal-width columns */
+    grid-gap: 10px; /* Adjust the space between columns and rows */
+    width: 100%; /* The container takes up 90% of the screen width */
+    height: 55%;
     padding: 20px 0;
     justify-items: center; /* Center items horizontally within each grid cell */
+    background-color: rgba(0, 86, 179, .25);
 }
 
 #services h4 {
     font-family: "Noto Sans Georgian", sans-serif;
-    font-size: 1.35rem;
+    font-size: 2rem;
     font-weight: 500;
     text-align: center;
     color: rgb(255, 255, 255);

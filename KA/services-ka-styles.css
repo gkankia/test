@@ -212,6 +212,18 @@ header nav ul li a:hover {
     background: url('https://zaxis-test.netlify.app/img/elbrus-2.svg') no-repeat center center/cover;
 }
 
+.services-what-container {
+    width: 90% !important;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Creates 3 equal-width columns */
+    grid-gap: 5px; /* Adjust the space between columns and rows */
+    padding: 20px;
+    justify-items: center; /* Center items horizontally within each grid cell */
+    background: #dd349750;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #000, rgb(0, 0, 0, 0));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #000, rgb(0, 0, 0, 0)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
 .services-what-title {
     width: 90%;
     text-align: left;
@@ -229,45 +241,44 @@ header nav ul li a:hover {
 .services-what-title h3 {
     font-family: "Noto Sans Georgian", sans-serif;
     font-size: 2.5rem;
-    font-weight: 500;
+    font-weight: 300;
     text-align: left;
     color: #ffffff;
     padding: 10px 0;
 }
 
-.services-what-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal-width columns */
-    grid-gap: 20px; /* Adjust the space between columns and rows */
-    width: 90%; /* The container takes up 90% of the screen width */
-    padding: 20px 0;
-    justify-items: center; /* Center items horizontally within each grid cell */
-}
-
-#services-what h4 {
-    font-family: "Noto Sans Georgian", sans-serif;
-    font-size: 1.35rem;
-    font-weight: 400;
-    text-align: center;
-    color: #ffffff;
-    /*text-shadow: 1px 1px #58E, 2px 2px #fff, 3px 3px #58E;*/
-    padding: 10px 0;
-}
-
-.column-ka {
+.column-ka-dataviz, .column-ka-spatial, .column-ka-research, .column-ka-edu, .column-ka-planning {
     display: flex;
     flex-direction: column;
     align-items: center; /* Center items inside the column */
-    justify-content: center;
-    font-family: "Noto Sans Georgian", sans-serif;
-    color: white;
     text-align: center; /* Center text inside columns */
     padding: 20px;
     box-sizing: border-box;
 }
 
-.column-ka p {
-    font-size: 1.25rem;
+.column-ka-dataviz h4, .column-ka-spatial h4, .column-ka-research h4, .column-ka-edu h4, .column-ka-planning h4 {
+    width: 100%; /* Ensure the h4 takes up full width */
+    font-family: "Noto Sans Georgian", sans-serif;
+    font-size: 1.85rem;
+    font-weight: 500;
+    text-align: center; /* Center the h4 text */
+    padding: 10px 0;
+    color: rgb(255, 255, 255);
+    text-shadow:
+    2px 2px 2px rgba(0, 86, 179, .5),
+    -1px 1px 1px rgba(0, 86, 179, .5),
+    -1px -1px 0 rgba(0, 86, 179, .5),
+    2px -2px 0 rgba(0, 86, 179, .5);
+}
+
+.column-ka-dataviz p, .column-ka-spatial p, .column-ka-research p, .column-ka-edu p, .column-ka-planning p {
+    width: 100%; /* Ensure the p takes up full width */
+    font-family: "Noto Sans Georgian", sans-serif;
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+    text-align: center; /* Center the p text */
+    color: #ffffff;
+    padding: 10px 0;
 }
 
 /* Ensure SVG is centered */
@@ -321,34 +332,6 @@ header nav ul li a:hover {
     margin-top: 100px;
     grid-template-columns: repeat(2, 4fr);
     gap: 10px;
-}
-
-.services-how-member {
-    font-family: "Noto Sans Georgian", sans-serif;
-    color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.team-member img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    border: 3px solid white;
-    object-fit: cover;
-    margin-bottom: 15px;
-}
-
-.team-member h3 {
-    margin: 10px 0 5px;
-    font-weight: 400;
-    font-size: 1.25em;
-}
-
-.team-member p {
-    font-size: 1em;
-    font-weight: 300;
 }
 
 /* Section styling */
@@ -548,8 +531,8 @@ section.active {
     --gap: 2.5px;  /* the gap */ 
     --radius: 7.5px;  /* the radius */
     background: #2B6767;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, rgba(90, 153, 120, .5), rgba(113, 178, 128));  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, rgba(90, 153, 120, .5),  rgba(113, 178, 128)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to bottom,  rgba(255, 255, 255, 1), rgba(85, 136, 238, .5));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom,  rgba(255, 255, 255, 1), rgba(85, 136, 238, .5)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .contact-content {
