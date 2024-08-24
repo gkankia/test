@@ -214,7 +214,7 @@ span {
     z-index: 1;
 }
 
-.hero-button, .about-button, .service-button, .blog-button, .projects-button, .urbanyx-button  {
+.hero-button, .about-button, .service-button, .blog-button, .projects-button {
     display: inline-block;
     padding: 10px 20px;
     font-size: 1.25em;
@@ -227,7 +227,7 @@ span {
     box-shadow: 5px 5px 0 #0056b3; /* Add box shadow on hover */
 }
 
-.hero-button:hover, .about-button:hover, .service-button:hover, .blog-button:hover, .projects-button:hover, .urbanyx-button:hover {
+.hero-button:hover, .about-button:hover, .service-button:hover, .blog-button:hover, .projects-button:hover {
     /*border: 5px solid #fff;*/
     box-shadow: 8px 8px 0 #0056b3; /* Add box shadow on hover */
     text-shadow: 1px 1px #fff, 2px 2px #fff, 3px 3px #fff;
@@ -372,7 +372,7 @@ section.active {
     text-align: center;
     box-sizing: border-box;
     background: url('./img/background-georgia.png') no-repeat center center/cover;
-    z-index: 1000;
+    z-index: 1;
 }
 
 #services:before {
@@ -588,6 +588,124 @@ section.active {
 .grid-item:hover img {
     transform: scale(1.05);
     transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Urbanyx Project section styling */
+#urbanyx {
+    position: relative;
+    height: 100vh;
+    padding: 15% 0 2% 0;
+    /*background: url('https://zaxis-test.netlify.app/img/elbrus-4.svg') no-repeat center center/cover;
+
+    /*background: #2B6767;  /* fallback for old browsers */
+    /*background: -webkit-linear-gradient(to bottom, rgb(2, 48, 71, .5), rgb(2, 48, 71, .5));  /* Chrome 10-25, Safari 5.1-6 */
+    /*background: linear-gradient(to bottom, rgb(2, 48, 71, .5), rgb(2, 48, 71, .5)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#urbanyx::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://zaxis-test.netlify.app/img/urbanyx-promo-1.svg') no-repeat center center;
+    background-size: cover;
+    opacity: 0.5;
+    transition: opacity 0.5s ease;
+    z-index: -1; /* Ensures the overlay is behind other content */
+}
+
+#urbanyx:hover::before {
+    opacity: 1; /* Change this value to the desired opacity on hover */
+}
+
+.urbanyx-container {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.urbanyx-button  {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.25em;
+    color: #2022a1;
+    font-family: "Noto Sans Georgian", sans-serif;
+    background-color: #ffde59;
+    text-decoration: none;
+    border: none;
+    text-shadow: 1px 1px #fff, 2px 2px #fff;
+    box-shadow: 5px 5px 0 #0056b3; /* Add box shadow on hover */
+}
+
+.urbanyx-button:hover {
+    /*border: 5px solid #fff;*/
+    box-shadow: 8px 8px 0 #0056b3; /* Add box shadow on hover */
+    text-shadow: 1px 1px #fff, 2px 2px #fff, 3px 3px #fff;
+    transform: scale(1.02); /* Slightly increase size on hover */
+    transition: transform 0.3s ease;
+}
+
+#urbanyx h2 {
+    font-family: "Noto Sans Georgian", sans-serif;
+    font-size: 10rem;
+    color: rgba(0, 0, 0, .5);
+    -webkit-text-stroke: 1px #ffffff;
+    text-decoration: none;
+    text-shadow: 1px 1px rgba(32, 34, 161, .5), 2px 2px rgba(32, 34, 161, .5), 3px 3px rgba(32, 34, 161, .5), 4px 4px rgba(32, 34, 161, .5);/*, 5px 5px rgba(32, 34, 161, .5), 6px 6px rgba(32, 34, 161, .5);*/
+    text-align: right;
+}
+
+#urbanyx h2:hover {
+    font-family: "Noto Sans Georgian", sans-serif;
+    font-size: 10rem;
+    color: rgba(0, 0, 0, .5);
+    -webkit-text-stroke: 1px #ffffff;
+    text-shadow: 1px 1px rgba(32, 34, 161, .5), 2px 2px rgba(32, 34, 161, .5), 3px 3px rgba(32, 34, 161, .5), 4px 4px rgba(32, 34, 161, .5), 5px 5px rgba(32, 34, 161, .5), 6px 6px rgba(32, 34, 161, .5);
+    text-align: right;
+    text-decoration: none;
+    transform: scale(1.02); /* Slightly increase size on hover */
+    transition: transform 0.3s ease;
+}
+
+#urbanyx p {
+    font-family: "Noto Sans Georgian", sans-serif;
+    font-size: 2rem;
+    font-weight: 300;
+    text-align: left;
+    padding: 40px; 
+    color: #0056b3;
+    background: #ffffff;
+    box-shadow: 5px 5px 0 #ffde59; /* Add box shadow on hover */
+    /*text-shadow: 1px 1px #58E, 2px 2px #fff, 3px 3px #58E;*/
+}
+
+.urbanyx-split-columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Optional, for spacing between columns */
+}
+
+.urbanyx-split-columns .urbanyx-column-left {
+    flex: 1;
+    min-width: calc(50% - 10px); /* Adjust based on gap */
+}
+
+.urbanyx-split-columns .urbanyx-column-right {
+    flex: 1;
+    min-width: calc(50% - 10px); /* Adjust based on gap */
+}
+
+.urbanyx-column-right-text-container {
+    width: calc(90% - 10px);
+    padding: 30px;
+}
+
+.urbanyx-button-container {
+    margin: 20px;
+    display: flex;
+    gap: 50px;
 }
 
 /* Blog section styling */

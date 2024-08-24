@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
-        
+
 // JavaScript for changing logo on scroll
 window.addEventListener('scroll', function() {
     const header = document.querySelector('header');
@@ -53,3 +53,4 @@ window.addEventListener('scroll', function() {
         logoImg.src = './img/zaxis-new.svg'; // Change back to the default logo
     }
 });
+
