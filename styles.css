@@ -199,6 +199,36 @@ span {
 .projects-button-container {
     text-align: center;
     margin-top: 30px;
+    height: 100px;
+}
+
+.urbanyx-button-container {
+    text-align: center;
+    margin-top: 150px;
+    height: 100px;
+}
+
+.urbanyx-button  {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.25em;
+    color: #2022a1;
+    font-family: "Noto Sans Georgian", sans-serif;
+    background-color: #fff;
+    text-decoration: none;
+    border: 2px solid #2022a1;
+    border-radius: 5px;
+    /*text-shadow: 1px 1px #fff, 2px 2px #fff;
+    /*box-shadow: 5px 5px 0 #0056b3; /* Add box shadow on hover */
+}
+
+.urbanyx-button:hover {
+    /*border: 5px solid #fff;*/
+    /*box-shadow: 8px 8px 0 #0056b3; /* Add box shadow on hover */
+    background-color: #ffde59;
+    text-shadow: 1px 1px #fff, 2px 2px #fff, 3px 3px #fff;
+    transform: scale(1.02); /* Slightly increase size on hover */
+    transition: transform 0.3s ease;
 }
 
 .about-button-container {
@@ -214,7 +244,7 @@ span {
     z-index: 1;
 }
 
-.hero-button, .about-button, .service-button, .blog-button, .projects-button, .urbanyx-button  {
+.hero-button, .about-button, .service-button, .blog-button, .projects-button {
     display: inline-block;
     padding: 10px 20px;
     font-size: 1.25em;
@@ -227,12 +257,13 @@ span {
     box-shadow: 5px 5px 0 #0056b3; /* Add box shadow on hover */
 }
 
-.hero-button:hover, .about-button:hover, .service-button:hover, .blog-button:hover, .projects-button:hover, .urbanyx-button:hover {
+.hero-button:hover, .about-button:hover, .service-button:hover, .blog-button:hover, .projects-button:hover {
     /*border: 5px solid #fff;*/
     box-shadow: 8px 8px 0 #0056b3; /* Add box shadow on hover */
     text-shadow: 1px 1px #fff, 2px 2px #fff, 3px 3px #fff;
     transform: scale(1.02); /* Slightly increase size on hover */
     transition: transform 0.3s ease;
+    z-index: 1;
 }
 
 /* Section styling */
@@ -471,80 +502,6 @@ section.active {
     display: block; /* Ensures proper block-level display */
     margin: 0 auto; /* Centers the image horizontally */
 }
-/* Urbanyx Project section styling */
-
-#urbanyx {
-    height: 100vh;
-    background: url('./img/urbanyx-promo-1.svg') no-repeat center center;
-    background-size: cover;
-    background-attachment: fixed; /* This property is key for the parallax effect */
-}
-
-.urbanyx-container {
-    width: 100%;
-    margin: auto;
-    overflow: hidden;
-}
-
-#urbanyx h2 {
-    font-family: JetBrains Mono, monospace;
-    font-size: 10rem;
-    color: rgba(0, 0, 0, .5);
-    -webkit-text-stroke: 1px #ffffff;
-    text-decoration: none;
-    text-shadow: 1px 1px rgba(32, 34, 161, .5), 2px 2px rgba(32, 34, 161, .5), 3px 3px rgba(32, 34, 161, .5), 4px 4px rgba(32, 34, 161, .5);/*, 5px 5px rgba(32, 34, 161, .5), 6px 6px rgba(32, 34, 161, .5);*/
-    text-align: right;
-}
-
-#urbanyx h2:hover {
-    font-family: JetBrains Mono, monospace;
-    font-size: 10rem;
-    color: rgba(0, 0, 0, .5);
-    -webkit-text-stroke: 1px #ffffff;
-    text-shadow: 1px 1px rgba(32, 34, 161, .5), 2px 2px rgba(32, 34, 161, .5), 3px 3px rgba(32, 34, 161, .5), 4px 4px rgba(32, 34, 161, .5), 5px 5px rgba(32, 34, 161, .5), 6px 6px rgba(32, 34, 161, .5);
-    text-align: right;
-    text-decoration: none;
-    transform: scale(1.02); /* Slightly increase size on hover */
-    transition: transform 0.3s ease;
-}
-
-#urbanyx p {
-    font-family: Josefin Sans;
-    font-size: 2rem;
-    font-weight: 300;
-    text-align: left;
-    padding: 20px;
-    color: #2022a1;
-    background-image: linear-gradient(90deg, rgb(255, 255, 255), rgb(255, 255, 255));
-    /*text-shadow: 1px 1px #58E, 2px 2px #fff, 3px 3px #58E;*/
-}
-
-.urbanyx-split-columns {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px; /* Optional, for spacing between columns */
-}
-
-.urbanyx-split-columns .urbanyx-column-left {
-    flex: 1;
-    min-width: calc(50% - 10px); /* Adjust based on gap */
-}
-
-.urbanyx-split-columns .urbanyx-column-right {
-    flex: 1;
-    min-width: calc(50% - 10px); /* Adjust based on gap */
-}
-
-.urbanyx-column-right-text-container {
-    width: calc(90% - 10px);
-    padding: 30px;
-}
-
-.urbanyx-button-container {
-    margin: 20px;
-    display: flex;
-    gap: 50px;
-}
 
 /* Projects section styling */ 
 #featured-projects {
@@ -562,6 +519,20 @@ section.active {
     text-align: left;
     color: #2022a1;
     /*text-shadow: 1px 1px #58E, 2px 2px #fff, 3px 3px #58E;*/
+}
+
+.projects-title {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.projects-container {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    padding: 0;
 }
 
 .filter-buttons {
@@ -585,7 +556,6 @@ section.active {
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    height: 100vh;
 }
 
 .grid-item {
@@ -654,6 +624,103 @@ section.active {
     transform: scale(1.05);
     transition: transform 0.3s ease; /* Smooth transition for hover effect */
 }
+
+/* Urbanyx Project section styling */
+#urbanyx {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 15% 0 2% 0;
+    /*background: url('https://zaxis-test.netlify.app/img/elbrus-4.svg') no-repeat center center/cover;
+    /*background: #2B6767;  /* fallback for old browsers */
+    /*background: -webkit-linear-gradient(to bottom, rgb(2, 48, 71, .5), rgb(2, 48, 71, .5));  /* Chrome 10-25, Safari 5.1-6 */
+    /*background: linear-gradient(to bottom, rgb(2, 48, 71, .5), rgb(2, 48, 71, .5)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#urbanyx::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://zaxis-test.netlify.app/img/urbanyx-promo-1.svg') no-repeat center center;
+    background-size: cover;
+    /*opacity: 0.5;
+    transition: opacity 0.5s ease;*/
+    z-index: -1; /* Ensures the overlay is behind other content */
+}
+
+#urbanyx:hover::before {
+    opacity: 1; /* Change this value to the desired opacity on hover */
+}
+
+.urbanyx-container {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+#urbanyx h2 {
+    font-family: JetBrains Mono, monospace;
+    font-size: 10rem;
+    color: rgba(0, 0, 0, .5);
+    -webkit-text-stroke: 1px #ffffff;
+    text-decoration: none;
+    text-shadow: 1px 1px rgba(32, 34, 161, .5), 2px 2px rgba(32, 34, 161, .5), 3px 3px rgba(32, 34, 161, .5), 4px 4px rgba(32, 34, 161, .5);/*, 5px 5px rgba(32, 34, 161, .5), 6px 6px rgba(32, 34, 161, .5);*/
+    text-align: right;
+}
+
+#urbanyx h2:hover {
+    font-family: JetBrains Mono, monospace;
+    font-size: 10rem;
+    color: rgba(0, 0, 0, .5);
+    -webkit-text-stroke: 1px #ffffff;
+    text-shadow: 1px 1px rgba(32, 34, 161, .5), 2px 2px rgba(32, 34, 161, .5), 3px 3px rgba(32, 34, 161, .5), 4px 4px rgba(32, 34, 161, .5), 5px 5px rgba(32, 34, 161, .5), 6px 6px rgba(32, 34, 161, .5);
+    text-align: right;
+    text-decoration: none;
+    transform: scale(1.02); /* Slightly increase size on hover */
+    transition: transform 0.3s ease;
+}
+
+#urbanyx p {
+    font-family: Josefin Sans;
+    font-size: 2rem;
+    font-weight: 300;
+    text-align: left;
+    padding: 40px; 
+    color: #0056b3;
+    background: #ffffff;
+    box-shadow: 5px 5px 0 #ffde59; /* Add box shadow on hover */
+    /*text-shadow: 1px 1px #58E, 2px 2px #fff, 3px 3px #58E;*/
+}
+
+.urbanyx-split-columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Optional, for spacing between columns */
+}
+
+.urbanyx-split-columns .urbanyx-column-left {
+    flex: 1;
+    min-width: calc(50% - 10px); /* Adjust based on gap */
+}
+
+.urbanyx-split-columns .urbanyx-column-right {
+    flex: 1;
+    min-width: calc(50% - 10px); /* Adjust based on gap */
+}
+
+.urbanyx-column-right-text-container {
+    width: calc(90% - 10px);
+    padding: 30px;
+}
+
+/*.urbanyx-button-container {
+    margin: 20px;
+    display: flex;
+    gap: 50px;
+}*/
 
 /* Blog section styling */
 #vissualies {
@@ -736,6 +803,60 @@ section.active {
     gap: 5px; /* Adjust gap as needed */
 }
 
+.blog-date {
+    position: absolute;
+    top: 0;
+    left: 0; 
+    padding: 10px;
+    z-index: 2;
+    font-family: JetBrains Mono, monospace;
+    font-weight: 400;
+    color: #2022a1;
+    text-decoration: none;
+    background:rgba(255, 255, 255, 1);
+    box-shadow: 5px 5px #ffde59;
+}
+
+.blog-number {
+    position: absolute;
+    right: 0; 
+    z-index: 2;
+    font-family: JetBrains Mono, monospace;
+    font-size: 18rem;
+    font-weight: 400;
+    color: #ffffff75;
+    -webkit-text-stroke: 1px #2022a1;
+    paint-order: stroke fill;
+    text-decoration: none;
+}
+
+.blog-category-en {
+    position: absolute;
+    padding: 10px;
+    top: 235px;
+    left: 0; 
+    z-index: 2;
+    font-family: JetBrains Mono, monospace;
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.category-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff75;
+    font-size: 1em;
+    font-family: JetBrains Mono, monospace;
+}
+
+.category-link:hover {
+    color: #ffde59;
+    transform: scale(1.05); /* Slightly increase size on hover */
+    transition: transform 0.3s ease;
+}
+
 .author-link {
     display: flex;
     align-items: center;
@@ -743,34 +864,6 @@ section.active {
     color: #2022a1;
     font-size: 1em;
     font-family: Josefin Sans;
-}
-
-.blog-date {
-    position: absolute;
-    top: 0;
-    left: 0; 
-    padding: 10px;
-    z-index: 2;
-    font-family: Josefin Sans;
-    font-weight: 400;
-    color: #2022a1;
-    text-decoration: none;
-    background:rgba(255, 255, 255, 1);
-    box-shadow: 5px 5px #ffde59;
-}
-
-.blog-date-ka {
-    position: absolute;
-    top: 0;
-    left: 0; 
-    padding: 10px;
-    z-index: 2;
-    font-family: Noto Sans Georgian;
-    font-weight: 400;
-    color: #2022a1;
-    text-decoration: none;
-    background:rgba(255, 255, 255, 1);
-    box-shadow: 5px 5px #ffde59;
 }
 
 .author-link:hover {
