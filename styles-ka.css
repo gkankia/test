@@ -25,9 +25,10 @@ body {
     text-decoration: none;
     transition: background 0.3s ease, color 0.3s ease;
     color: #2022a1;
-    font-family: JetBrains Mono, monospace;
+    font-family: "Noto Sans Georgian", sans-serif;
     font-size: 1.25rem;
-    font-weight: 500;
+    font-weight: 400;
+    text-transform: uppercase;
     text-shadow: 1px 1px #58E, 2px 2px #fff, 3px 3px #58E;
 }
 
@@ -104,8 +105,9 @@ header nav ul li a {
     text-decoration: none;
     font-family: "Noto Sans Georgian", sans-serif;
     font-size: 1.25rem;
-    font-weight: 500;
-    text-shadow: 1px 1px #fff, 2px 2px #58E;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-shadow: 1px 1px #fff, 1.5px 1.5px #58E;
     transition: font-size 0.3s ease, color 0.3s ease; /* Smooth transition for size and color */
     cursor: pointer;
 }
@@ -150,8 +152,9 @@ header nav ul li a:hover {
     width: 100%;
     padding: 10px 0;
     font-family: "Noto Sans Georgian", sans-serif;
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-weight: 300;
+    text-transform: uppercase;
     box-sizing: border-box;
     margin: 20px;
 }
@@ -217,6 +220,7 @@ span {
     background-color: #fff;
     text-decoration: none;
     border: 2px solid #2022a1;
+    box-shadow: 5px 5px 0 #ffde59; /* Add box shadow on hover */
     border-radius: 5px;
     /*text-shadow: 1px 1px #fff, 2px 2px #fff;
     /*box-shadow: 5px 5px 0 #0056b3; /* Add box shadow on hover */
@@ -224,17 +228,17 @@ span {
 
 .urbanyx-button:hover {
     /*border: 5px solid #fff;*/
-    /*box-shadow: 8px 8px 0 #0056b3; /* Add box shadow on hover */
-    background-color: #ffde59;
-    text-shadow: 1px 1px #fff, 2px 2px #fff, 3px 3px #fff;
-    transform: scale(1.02); /* Slightly increase size on hover */
+    box-shadow: 8px 8px 0 #ffde59; /* Add box shadow on hover */
+    /*background-color: #ffde59;*/
+    /*text-shadow: 1px 1px #fff, 2px 2px #fff, 3px 3px #fff;*/
+    /*transform: scale(1.02); /* Slightly increase size on hover */
     transition: transform 0.3s ease;
 }
 
 .about-button-container {
     position: absolute;
-    top: 50%;
-    left: 20%;
+    bottom: 30%;
+    left: 25%;
 }
 
 .service-button-container {
@@ -305,8 +309,10 @@ section.active {
 
 #about h2, #vissualies h2, #featured-projects h2 {
     font-family: "Noto Sans Georgian", sans-serif;
+    text-transform: uppercase;
     font-size: 6rem;
     color: #ffde59;
+    paint-order: stroke fill;
     -webkit-text-stroke: 1px #ffffff;
     text-shadow: 1px 1px #2022a1, 2px 2px #2022a1, 3px 3px #2022a1, 4px 4px #2022a1, 5px 5px #2022a1;
     text-align: left;
@@ -336,8 +342,10 @@ section.active {
 
 #partners h2 {
     font-family: "Noto Sans Georgian", sans-serif;
+    text-transform: uppercase;
     font-size: 6rem;
     color: #ffde59;
+    paint-order: stroke fill;
     -webkit-text-stroke: 1px #ffffff;
     text-shadow: 1px 1px #2022a1, 2px 2px #2022a1, 3px 3px #2022a1, 4px 4px #2022a1, 5px 5px #2022a1, 6px 6px #2022a1;
     text-align: left;
@@ -436,7 +444,9 @@ section.active {
 
 #services h2 {
     font-family: "Noto Sans Georgian", sans-serif;
+    text-transform: uppercase;
     font-size: 6rem;
+    paint-order: stroke fill;
     color: rgb(255, 222, 89);
     -webkit-text-stroke: 1px #ffffff;
     text-shadow: 1px 1px #2022a1, 2px 2px #2022a1, 3px 3px #2022a1, 4px 4px #2022a1, 5px 5px #2022a1, 6px 6px #2022a1;
@@ -614,8 +624,9 @@ section.active {
     -webkit-text-stroke: .5px #000;
     text-align: left;
     font-family: "Noto Sans Georgian", sans-serif;
-    font-size: 2rem;
-    font-weight: 400;
+    font-size: 3rem;
+    font-weight: 300;
+    text-transform: uppercase;
     color: #2022a1; 
     /*text-shadow: 1px 1px #ffffff, 2px 2px #ffde59;*/
     margin: 10px 0;
@@ -669,8 +680,8 @@ section.active {
     overflow: hidden;
 }
 
-#urbanyx h2 {
-    font-family: "Noto Sans Georgian", sans-serif;
+#urbanyx h3 {
+    font-family: JetBrains Mono, monospace;
     font-size: 10rem;
     color: rgba(0, 0, 0, .5);
     -webkit-text-stroke: 1px #ffffff;
@@ -679,8 +690,8 @@ section.active {
     text-align: right;
 }
 
-#urbanyx h2:hover {
-    font-family: "Noto Sans Georgian", sans-serif;
+#urbanyx h3:hover {
+    font-family: JetBrains Mono, monospace;
     font-size: 10rem;
     color: rgba(0, 0, 0, .5);
     -webkit-text-stroke: 1px #ffffff;
@@ -693,9 +704,10 @@ section.active {
 
 #urbanyx p {
     font-family: "Noto Sans Georgian", sans-serif;
-    font-size: 1.75rem;
-    font-weight: 300;
+    font-size: 1.5rem;
+    font-weight: 400;
     text-align: left;
+    text-transform: uppercase;
     padding: 40px; 
     color: #0056b3;
     background: #ffffff;
@@ -789,6 +801,7 @@ section.active {
     font-family: "Noto Sans Georgian", sans-serif;
     font-size: 1.5rem;
     font-weight: 400;
+    text-transform: uppercase;
     color: #2022a1;
     text-align: left; /* Align heading text to the left */
 }
@@ -854,7 +867,8 @@ section.active {
     top: 235px;
     left: 0; 
     z-index: 2;
-    font-family: JetBrains Mono, monospace;
+    font-family: 'Noto Sans Georgian', sans-serif;
+    text-transform: uppercase;
     font-size: 2.5rem;
     font-weight: 400;
     text-decoration: none;
@@ -866,7 +880,6 @@ section.active {
     text-decoration: none;
     color: #ffffff75;
     font-size: 1em;
-    font-family: JetBrains Mono, monospace;
 }
 
 .category-link:hover {
@@ -912,28 +925,7 @@ section.active {
     height: 100vh;
     padding: 50px 20px;
     background-color: #ffffff; /* Background color for the newsletter section */
-    /*box-sizing: border-box;
-    background-image: linear-gradient(0deg, #58E 0%, #ffffff 100%) !important;
-    background-size: 150% !important;
-    -webkit-animation: Gradient 10s ease infinite !important;
-    -moz-animation: Gradient 10s ease infinite !important;
-    animation: Gradient 10s ease infinite !important;
-}
-
-@-webkit-keyframes Gradient {
-    0% {background-position: 0% 50%}
-    50% {background-position: 100% 50%}
-    100% {background-position: 0% 50%}
-}
-@-moz-keyframes Gradient {
-    0% {background-position: 0% 50%}
-    50% {background-position: 100% 50%}
-    100% {background-position: 0% 50%}
-}
-@keyframes Gradient { 
-    0% {background-position: 0% 50%}
-    50% {background-position: 100% 50%}
-    100% {background-position: 0% 50%}*/
+    box-sizing: border-box;
 }
 
 #newsletter h1 {
@@ -994,7 +986,7 @@ p.newsletter-consent {
 
 #subscription-form input[type="email"], #subscription-form button {
     height: 50px; /* Ensure the input and button have the same height */
-    font-family: "Noto Sans Georgian", sans-serif;
+    font-family: JetBrains Mono, monospace;
     font-size: 1rem;
     letter-spacing: 0.05em; /* Add letter spacing */
     border: none;
@@ -1004,7 +996,7 @@ p.newsletter-consent {
 
 /* Custom placeholder color */
 #subscription-form input[type="email"]::placeholder {
-    font-family: "Noto Sans Georgian", sans-serif;
+    font-family: JetBrains Mono, monospace;
     color: #2022a163; /* Custom placeholder font color */
 }
 

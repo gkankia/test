@@ -25,9 +25,10 @@ body {
     text-decoration: none;
     transition: background 0.3s ease, color 0.3s ease;
     color: #2022a1;
-    font-family: JetBrains Mono, monospace;
+    font-family: "Noto Sans Georgian", sans-serif;
     font-size: 1.25rem;
-    font-weight: 500;
+    font-weight: 400;
+    text-transform: uppercase;
     text-shadow: 1px 1px #58E, 2px 2px #fff, 3px 3px #58E;
 }
 
@@ -104,8 +105,9 @@ header nav ul li a {
     text-decoration: none;
     font-family: JetBrains Mono, monospace;
     font-size: 1.25rem;
-    font-weight: 500;
-    text-shadow: 1px 1px #58E, 2px 2px #fff, 3px 3px #58E;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-shadow: 1px 1px #fff, 1.5px 1.5px #58E;
     transition: font-size 0.3s ease, color 0.3s ease; /* Smooth transition for size and color */
     cursor: pointer;
 }
@@ -213,10 +215,11 @@ span {
     padding: 10px 20px;
     font-size: 1.25em;
     color: #2022a1;
-    font-family: "Noto Sans Georgian", sans-serif;
+    font-family: josefin sans;
     background-color: #fff;
     text-decoration: none;
     border: 2px solid #2022a1;
+    box-shadow: 5px 5px 0 #ffde59; /* Add box shadow on hover */
     border-radius: 5px;
     /*text-shadow: 1px 1px #fff, 2px 2px #fff;
     /*box-shadow: 5px 5px 0 #0056b3; /* Add box shadow on hover */
@@ -224,10 +227,10 @@ span {
 
 .urbanyx-button:hover {
     /*border: 5px solid #fff;*/
-    /*box-shadow: 8px 8px 0 #0056b3; /* Add box shadow on hover */
-    background-color: #ffde59;
-    text-shadow: 1px 1px #fff, 2px 2px #fff, 3px 3px #fff;
-    transform: scale(1.02); /* Slightly increase size on hover */
+    box-shadow: 8px 8px 0 #ffde59; /* Add box shadow on hover */
+    /*background-color: #ffde59;*/
+    /*text-shadow: 1px 1px #fff, 2px 2px #fff, 3px 3px #fff;*/
+    /*transform: scale(1.02); /* Slightly increase size on hover */
     transition: transform 0.3s ease;
 }
 
@@ -661,7 +664,7 @@ section.active {
     overflow: hidden;
 }
 
-#urbanyx h2 {
+#urbanyx h3 {
     font-family: JetBrains Mono, monospace;
     font-size: 10rem;
     color: rgba(0, 0, 0, .5);
@@ -671,7 +674,7 @@ section.active {
     text-align: right;
 }
 
-#urbanyx h2:hover {
+#urbanyx h3:hover {
     font-family: JetBrains Mono, monospace;
     font-size: 10rem;
     color: rgba(0, 0, 0, .5);
@@ -688,6 +691,7 @@ section.active {
     font-size: 2rem;
     font-weight: 300;
     text-align: left;
+    text-transform: uppercase;
     padding: 40px; 
     color: #0056b3;
     background: #ffffff;
@@ -837,6 +841,7 @@ section.active {
     left: 0; 
     z-index: 2;
     font-family: JetBrains Mono, monospace;
+    text-transform: uppercase;
     font-size: 2.5rem;
     font-weight: 400;
     text-decoration: none;
@@ -897,17 +902,28 @@ section.active {
     box-sizing: border-box;
 }
 
+#newsletter h1 {
+    width: 100%;
+    font-family: Josefin Sans;
+    font-size: 10rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: #ffde59;
+    text-align: center; /* Align heading to the left */
+    text-shadow: 7px 7px #fff, 10px 10px #2022a1;
+}
+
 .newsletter-container {
     position: relative;
     text-align: left;
     width: 60%; /* Width of the container */
     /*max-width: 600px; /* Maximum width */
     text-align: center; /* Center align text */
-    background-image: linear-gradient(140deg, #5170ff 0%, #ff66c4 100%) !important;
+    /*background-image: linear-gradient(140deg, #5170ff 0%, #ff66c4 100%) !important;
     /*background: #58E; /* Background color for the container */
     padding: 100px;
-    border: 2px solid #ffffff;
-    box-shadow: 10px 10px #ffde59;
+    /*border: 2px solid #ffffff;
+    box-shadow: 10px 10px #ffde59;*/
 }
 
 #newsletter h2 {
@@ -915,22 +931,22 @@ section.active {
     font-size: 2rem;
     font-weight: 800;
     margin-bottom: 20px;
-    color: #ffffff;
-    text-align: left; /* Align heading to the left */
+    color: #2022a1;
+    left: 0;
 }
 
-p.sign-up {
+/*p.sign-up {
     font-family: Josefin Sans;
     font-size: 1rem;
     font-weight: 400;
     color: #ffffff;
     text-align: left; /* Align heading to the left */
-}
+/*}*/
 
 p.newsletter-consent {
     font-family: Josefin Sans;
-    font-size: .75rem;
-    color: #ffffff;
+    font-size: 1rem;
+    color: #2022a1;
     text-align: left; /* Align heading to the left */
     padding-top: 10px;
 }
@@ -944,6 +960,7 @@ p.newsletter-consent {
 
 #subscription-form input[type="email"], #subscription-form button {
     height: 50px; /* Ensure the input and button have the same height */
+    font-family: JetBrains Mono, monospace;
     font-size: 1rem;
     letter-spacing: 0.05em; /* Add letter spacing */
     border: none;
@@ -953,15 +970,16 @@ p.newsletter-consent {
 
 /* Custom placeholder color */
 #subscription-form input[type="email"]::placeholder {
-    color: #ffde59; /* Custom placeholder font color */
+    font-family: JetBrains Mono, monospace;
+    color: #2022a163; /* Custom placeholder font color */
 }
 
 #subscription-form input[type="email"] {
     background-color: transparent;
-    color: #ffde59;
+    color: #2022a1;
     width: calc(100% - 130px); /* Adjust width to leave space for the button */
     margin-right: 10px; /* Add some space between the input and button */
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid #2022a1;
 }
 
 #subscription-form button {
