@@ -237,7 +237,7 @@ span {
 
 .about-button-container {
     position: absolute;
-    bottom: 30%;
+    bottom: 35%;
     left: 25%;
 }
 
@@ -503,6 +503,10 @@ section.active {
     box-sizing: border-box;
 }
 
+.column-ka h2 {
+    text-transform: uppercase;
+}
+
 .column-ka p {
     font-size: 1.25rem;
 }
@@ -624,7 +628,7 @@ section.active {
     -webkit-text-stroke: .5px #000;
     text-align: left;
     font-family: "Noto Sans Georgian", sans-serif;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 300;
     text-transform: uppercase;
     color: #2022a1; 
@@ -800,7 +804,7 @@ section.active {
     margin: 20px 0 10px;
     font-family: "Noto Sans Georgian", sans-serif;
     font-size: 1.5rem;
-    font-weight: 400;
+    font-weight: 300;
     text-transform: uppercase;
     color: #2022a1;
     text-align: left; /* Align heading text to the left */
@@ -1041,7 +1045,7 @@ p.newsletter-consent {
     width: 100%;
     margin-top: 10px;
     padding: 10px;
-    font-family: "Noto Sans Georgian", sans-serif;
+    font-family: Josefin Sans;
     font-size: 1rem;
     font-weight: 400;
     color: #e20000;

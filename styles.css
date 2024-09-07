@@ -237,7 +237,7 @@ span {
 .about-button-container {
     position: absolute;
     top: 50%;
-    left: 20%;
+    left: 25%;
 }
 
 .service-button-container {
@@ -308,8 +308,10 @@ section.active {
 
 #about h2, #services h2, #vissualies h2, #featured-projects h2 {
     font-family: JetBrains Mono, monospace;
+    text-transform: uppercase;
     font-size: 6rem;
     color: #ffde59;
+    paint-order: stroke fill;
     -webkit-text-stroke: 1px #ffffff;
     text-shadow: 1px 1px #2022a1, 2px 2px #2022a1, 3px 3px #2022a1, 4px 4px #2022a1, 5px 5px #2022a1, 6px 6px #2022a1;
     text-align: left;
@@ -610,7 +612,8 @@ section.active {
     text-align: left;
     font-family: Josefin Sans;
     font-size: 2rem;
-    font-weight: 400;
+    font-weight: 300;
+    text-transform: uppercase;
     color: #2022a1; 
     /*text-shadow: 1px 1px #ffffff, 2px 2px #ffde59;*/
     margin: 10px 0;
@@ -784,7 +787,8 @@ section.active {
     margin: 20px 0 10px;
     font-family: Josefin Sans;
     font-size: 1.5rem;
-    font-weight: 400;
+    font-weight: 300;
+    text-transform: uppercase;
     color: #2022a1;
     text-align: left; /* Align heading text to the left */
 }
@@ -1163,6 +1167,7 @@ p.newsletter-consent {
 .column h2 {
     font-size: 1rem;
     font-weight: 500;
+    text-transform: uppercase;
     color: rgb(186, 184, 184);
     text-align: left;
     margin-bottom: 10px;
