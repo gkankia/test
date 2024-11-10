@@ -27,7 +27,7 @@ body:before {
       conic-gradient(at calc(var(--size) - 2 * var(--radius)) var(--size), transparent 75%, #000 0) var(--radius) 0,
       conic-gradient(at var(--size) calc(var(--size) - 2 * var(--radius)), transparent 75%, #000 0) 0 var(--radius);
     -webkit-mask-size: calc(var(--size) + var(--gap)) calc(var(--size) + var(--gap));
-    background: linear-gradient(0deg, #58E, #ffffff);
+    background: linear-gradient(0deg, rgba(85, 136, 238, .5), aliceblue);
     z-index: -10;
 }
 
@@ -43,9 +43,10 @@ body:before {
     text-decoration: none;
     transition: background 0.3s ease, color 0.3s ease;
     color: #2022a1;
-    font-family: JetBrains Mono, monospace;
+    font-family: "Noto Sans Georgian", sans-serif;
     font-size: 1.25rem;
-    font-weight: 500;
+    font-weight: 400;
+    text-transform: uppercase;
     text-shadow: 1px 1px #58E, 2px 2px #fff, 3px 3px #58E;
 }
 
@@ -116,8 +117,9 @@ header nav ul li a {
     text-decoration: none;
     font-family: "Noto Sans Georgian", sans-serif;
     font-size: 1.25rem;
-    font-weight: 500;
-    text-shadow: 1px 1px #fff, 2px 2px #58E;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-shadow: 1px 1px #fff, 1.5px 1.5px #58E;
     transition: font-size 0.3s ease, color 0.3s ease; /* Smooth transition for size and color */
     cursor: pointer;
 }
@@ -143,6 +145,7 @@ header nav ul li a:hover {
     opacity: 1; /* Ensure it is visible */
     transform: none; /* Ensure it is not affected by transform */
     transition: none; /* No transition for hero */
+    background: transparent
 }
 
 .hero .hero-content {
@@ -150,22 +153,23 @@ header nav ul li a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 80%;
+    width: 90%;
     position: relative; /* Ensure relative positioning for children */
 }
 
 .hero .header-title {
     width: 100%;
     font-family: "Noto Sans Georgian", sans-serif;
-    font-size: 4rem;
-    font-weight: 800;
+    font-size: 11.5rem;
+    font-weight: 500;
     box-sizing: border-box;
+    text-transform: uppercase;
     margin: 20px;
+    line-height: 200px;
     text-align: left;
     color: transparent;
     position: relative;
-    -webkit-text-stroke: 1px #ffffff;
-    background-image: linear-gradient(160deg,  #ff66c4, #2022a1) !important;
+    background-image: linear-gradient(140deg, #58E 0%, #ee59ff 100%) !important;
     background-size: 150% !important;
     background-clip: text;
     -webkit-background-clip: text;
@@ -198,7 +202,8 @@ header nav ul li a:hover {
     padding: 10px 0;
     font-family: "Noto Sans Georgian", sans-serif;
     font-size: 2.5rem;
-    font-weight: 500;
+    font-weight: 400;
+    text-transform: uppercase;
     box-sizing: border-box;
     margin: 20px;
 }
@@ -212,27 +217,28 @@ header nav ul li a:hover {
 
 #team h2 {
     font-family: "Noto Sans Georgian", sans-serif;
+    text-transform: uppercase;
     font-size: 5rem;
     color: #ffde59;
+    paint-order: stroke fill;
     -webkit-text-stroke: 1px #ffffff;
-    text-shadow: 1px 1px #2022a1, 2px 2px #2022a1, 3px 3px #2022a1, 4px 4px #2022a1, 5px 5px #2022a1, 6px 6px #2022a1;
+    text-shadow: 1px 1px #2022a1, 2px 2px #2022a1, 3px 3px #2022a1, 4px 4px #2022a1, 5px 5px #2022a1;
     text-align: right;
 }
 
 #team h4 {
-    width: 100%;
-    color: #ffffff;
-    padding: 10px 0;
     font-family: "Noto Sans Georgian", sans-serif;
     font-size: 2rem;
-    line-height: 1.6em;
-    font-weight: 300;
-    box-sizing: border-box;
+    font-weight: 400;
     text-align: right;
+    color: #2022a1;
+    text-transform: uppercase;
+    /*text-shadow: 1px 1px #58E, 2px 2px #fff, 3px 3px #58E;*/
+    padding: 10px;
 }
 
 .team-container, .motto-container {
-    width: 75%;
+    width:75%;
     margin: auto;
     overflow: hidden;
 }
@@ -247,6 +253,7 @@ header nav ul li a:hover {
 .team-member {
     font-family: "Noto Sans Georgian", sans-serif;
     color: #ffffff;
+    text-transform: uppercase;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -256,7 +263,7 @@ header nav ul li a:hover {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    border: 3px solid white;
+    border: 3.5px solid white;
     object-fit: cover;
     margin-bottom: 15px;
 }
@@ -270,6 +277,7 @@ header nav ul li a:hover {
 .team-member p {
     font-size: 1em;
     font-weight: 300;
+    text-transform: uppercase;
 }
 
 /* Section styling */
@@ -291,26 +299,28 @@ section.active {
 #motto {
     height: 100vh;
     padding: 5% 0 5% 0;
-    /*background: url('/Users/giorgikankia/Documents/GitHub/location intelligence services/img/pointy-mountains.png') no-repeat center center/cover;*/
 }
 
 #motto h2 {
     font-family: "Noto Sans Georgian", sans-serif;
+    text-transform: uppercase;
     font-size: 5rem;
     color: #ffde59;
+    paint-order: stroke fill;
     -webkit-text-stroke: 1px #ffffff;
-    text-shadow: 1px 1px #2022a1, 2px 2px #2022a1, 3px 3px #2022a1, 4px 4px #2022a1, 5px 5px #2022a1, 6px 6px #2022a1;
+    text-shadow: 1px 1px #2022a1, 2px 2px #2022a1, 3px 3px #2022a1, 4px 4px #2022a1, 5px 5px #2022a1;
     text-align: left;
 }
 
 #motto h4 {
     font-family: "Noto Sans Georgian", sans-serif;
     font-size: 2rem;
-    font-weight: 300;
-    text-align: left;
-    color: #ffffff;
+    font-weight: 400;
+    text-align: right;
+    color: #2022a1;
+    text-transform: uppercase;
     /*text-shadow: 1px 1px #58E, 2px 2px #fff, 3px 3px #58E;*/
-    padding: 10px 0;
+    padding: 10px;
 }
 
 /* Partners section */ 
@@ -328,19 +338,22 @@ section.active {
 
 #partners h2 {
     font-family: "Noto Sans Georgian", sans-serif;
+    text-transform: uppercase;
     font-size: 5rem;
     color: #ffde59;
+    paint-order: stroke fill;
     -webkit-text-stroke: 1px #ffffff;
-    text-shadow: 1px 1px #2022a1, 2px 2px #2022a1, 3px 3px #2022a1, 4px 4px #2022a1, 5px 5px #2022a1, 6px 6px #2022a1;
+    text-shadow: 1px 1px #2022a1, 2px 2px #2022a1, 3px 3px #2022a1, 4px 4px #2022a1, 5px 5px #2022a1;
     text-align: left;
 }
 
 #partners h4 {
     font-family: "Noto Sans Georgian", sans-serif;
     font-size: 2rem;
-    font-weight: 300;
-    text-align: left;
+    font-weight: 400;
+    text-align: justify;
     color: #2022a1;
+    text-transform: uppercase;
     /*text-shadow: 1px 1px #58E, 2px 2px #fff, 3px 3px #58E;*/
     padding: 10px;
 }
@@ -379,8 +392,7 @@ section.active {
 /* Navigation buttons */
 .strong {
     font-family: "Noto Sans Georgian", sans-serif;
-    font-size: 2.25rem;
-    font-weight: 500;
+    font-size: 2rem;
     color: transparent;
     position: relative;
     background-image: linear-gradient(160deg,  #2022a1, #f768a1) !important;
@@ -428,7 +440,7 @@ section.active {
 #contact {
     font-family: "Noto Sans Georgian", sans-serif;
     font-size: 5rem;
-    font-weight: 800;
+    font-weight: 600;
     text-align: center;
     box-sizing: border-box;
     min-height: 75vh;
@@ -439,9 +451,8 @@ section.active {
     --size: 75px; /* the size */
     --gap: 2.5px;  /* the gap */ 
     --radius: 7.5px;  /* the radius */
-
     /* Background with radial and conic gradients */
-    background-color: white;
+    background-color: transparent;
 }
 
 .contact-content {
@@ -453,11 +464,12 @@ section.active {
     background-size: 150% !important;
     background-clip: text;
     -webkit-background-clip: text;
+    text-transform: uppercase;
     text-fill-color: transparent;
     -webkit-text-fill-color: transparent;
-    -webkit-animation: Gradient 10s ease infinite !important;
-    -moz-animation: Gradient 10s ease infinite !important;
-    animation: Gradient 10s ease infinite !important;
+    -webkit-animation: Gradient 5s ease infinite !important;
+    -moz-animation: Gradient 5s ease infinite !important;
+    animation: Gradient 5s ease infinite !important;
 }
 
 @-webkit-keyframes Gradient {
@@ -480,7 +492,7 @@ section.active {
     content: "";
     position: fixed;
     inset: 0; /* Remove the gap */
-    --radial-gradient: radial-gradient(var(--radius) at var(--radius) var(--radius), #000 98%, transparent);
+    --radial-gradient: radial-gradient(var(--radius) at var(--radius) var(--radius), #fff 99%, transparent);
     --offset: calc(-2 * var(--radius) - var(--gap));
     -webkit-mask:
       var(--radial-gradient),
@@ -490,8 +502,8 @@ section.active {
       conic-gradient(at calc(var(--size) - 2 * var(--radius)) var(--size), transparent 75%, #000 0) var(--radius) 0,
       conic-gradient(at var(--size) calc(var(--size) - 2 * var(--radius)), transparent 75%, #000 0) 0 var(--radius);
     -webkit-mask-size: calc(var(--size) + var(--gap)) calc(var(--size) + var(--gap));
-    background: linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(85, 136, 238, .5));
-    z-index: -1;
+    background: linear-gradient(0deg, rgba(85, 136, 238, .5), rgba(255, 255, 255, 1));
+    z-index: 1;
 }
 
 .typewriter-container {
@@ -595,6 +607,7 @@ section.active {
     color: rgb(186, 184, 184);
     text-align: left;
     margin-bottom: 10px;
+    text-transform: uppercase;
 }
 
 .column-ka p {
@@ -620,6 +633,36 @@ section.active {
     color: #769ed3;
 }
 /* Form styling */
+/*form {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    margin: 0 auto;
+}
+
+form label {
+    margin: 10px 0 5px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px;
+    background: #77b300;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #66a300;
+}
 
 /* Footer styling */
 footer {
@@ -640,14 +683,17 @@ footer {
     display: flex;
     flex-wrap: wrap;
     gap: 20px; /* Optional, for spacing between columns */
+    align-items: center; /* Centers the content of each column vertically */
 }
 
 .split-columns .column-left,
 .split-columns .column-right {
-    max-height: 100%;
     margin: 0 auto;
     flex: 1;
     min-width: calc(50% - 10px); /* Adjust based on gap */
+    display: flex; /* Enables flex behavior inside each column */
+    flex-direction: column; /* Keeps content in vertical flow */
+    justify-content: center; /* Centers content vertically */
 }
 
 /* Responsive Design */
